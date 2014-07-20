@@ -21,7 +21,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 let g:indentLine_color_term = 237
 let g:indentLine_faster = 1
- 
+
 let mapleader = ','
 let g:mapleader = ','
 

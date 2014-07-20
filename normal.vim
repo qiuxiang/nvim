@@ -30,5 +30,4 @@ set backspace=indent,eol,start
 set bsdir=buffer
 set autochdir
 set noswapfile
-set timeoutlen=50
 set mouse=a
