@@ -13,13 +13,14 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'jistr/vim-nerdtree-tabs' 
 NeoBundle 'joonty/vdebug'
-NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'ap/vim-css-color'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'mkitt/tabline.vim'
 NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'Shougo/neocomplcache.vim'
+"NeoBundle 'Shougo/neocomplete.vim'
 
 NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
@@ -29,9 +30,3 @@ NeoBundle 'baskerville/bubblegum'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'tpope/vim-fugitive'
-
-if has('win32')
-  NeoBundle 'Shougo/neocompcache.vim'
-else
-  NeoBundle 'Shougo/neocomplete.vim'
-endif

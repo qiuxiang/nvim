@@ -1,5 +1,5 @@
 if has('gui_running')
-  set guioptions+=m
+  set guioptions-=m
   set guioptions-=T
   set guioptions-=L
   set guioptions-=r
@@ -15,7 +15,7 @@ endif
 if has('win32')
   set guifont=Sauce_Code_Powerline:h11:cANSI
 else
-  set guifont=Source\ Code\ Pro\ for\ Powerline\ Regular\ 11
+  set guifont=Source\ Code\ Pro\ for\ Powerline\ Regular\ 10
   "set guifont=Droid\ Sans\ Mono
   "set guifont=M+\ 1m\ Ultra-Light\ 11
 endif
