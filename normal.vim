@@ -28,6 +28,6 @@ set hlsearch
  
 set backspace=indent,eol,start
 set bsdir=buffer
-set autochdir
+"set autochdir
 set noswapfile
 set mouse=a

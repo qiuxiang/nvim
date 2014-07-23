@@ -21,6 +21,13 @@ NeoBundle 'mkitt/tabline.vim'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'Shougo/neocomplcache.vim'
 "NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Shougo/vimshell.vim'
+NeoBundle 'Shougo/vimproc.vim', {
+      \ 'build' : {
+      \     'windows' : 'tools\\update-dll-mingw',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ }
 
 NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
