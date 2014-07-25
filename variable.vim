@@ -26,6 +26,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:indentLine_color_term = 237
 let g:indentLine_faster = 1
 let g:indentLine_noConcealCursor = ''
+let g:indentLine_fileTypeExclude = ['stylus', 'jade']
 
 let mapleader = ','
 let g:mapleader = ','
@@ -33,4 +34,21 @@ let g:mapleader = ','
 if has('win32')
   let g:airline_left_sep = ''
   let g:airline_right_sep = ''
+else
+  let g:tagbar_iconchars = ["\u25b8", "\u25be"]
+
+  let g:airline_powerline_fonts = 1
+  let g:airline#extensions#tabline#close_symbol = "\u00d7"
+  let g:airline#extensions#promptline#snapshot_file = '~/.shell_prompt.sh'
+  let g:airline#extensions#promptline#enabled = 1
+
+  let g:promptline_symbols = {
+        \ 'left' : "\ue0b0",
+        \ 'right' : "\ue0b2",
+        \ 'left_alt' : "\ue0b1",
+        \ 'right_alt' : "\ue0b3",
+        \ 'dir_sep' : " \ue0b1 ",
+        \ 'truncation' : '...',
+        \ 'vcs_branch' : "\ue0a0 ",
+        \ 'space' : ' '}
 endif

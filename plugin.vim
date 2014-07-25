@@ -37,3 +37,7 @@ NeoBundle 'baskerville/bubblegum'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'tpope/vim-fugitive'
+
+if !has('win32')
+  NeoBundle 'edkolev/promptline.vim'
+endif
