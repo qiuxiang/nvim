@@ -13,14 +13,11 @@ if &term == 'xterm'
 endif
 
 if has('win32')
-  set guifont=Sauce_Code_Powerline:h11:cANSI
+  set guifont=Consolas:h11:cANSI
 else
   set guifont=Source\ Code\ Pro\ for\ Powerline\ Regular\ 10
-  "set guifont=Droid\ Sans\ Mono
-  "set guifont=M+\ 1m\ Ultra-Light\ 11
 endif
 
 color Tomorrow-Night-Eighties
 
-"highlight LineNr guifg=DarkGray guibg=NONE ctermfg=DarkGray ctermbg=NONE
 highlight clear SignColumn
