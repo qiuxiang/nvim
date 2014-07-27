@@ -17,16 +17,6 @@ NeoBundle 'ap/vim-css-color'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'mattn/emmet-vim'
-NeoBundle 'mkitt/tabline.vim'
-NeoBundle 'Shougo/neocomplcache.vim'
-"NeoBundle 'Shougo/neocomplete.vim'
-"NeoBundle 'Shougo/vimshell.vim'
-"NeoBundle 'Shougo/vimproc.vim', {
-"      \ 'build' : {
-"      \     'windows' : 'tools\\update-dll-mingw',
-"      \     'unix' : 'make -f make_unix.mak',
-"      \    },
-"      \ }
 
 NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
@@ -37,7 +27,10 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'tpope/vim-fugitive'
 
-if !has('win32')
+if has('win32')
+  NeoBundle 'Shougo/neocomplcache.vim'
+else
   NeoBundle 'Yggdroot/indentLine'
   NeoBundle 'edkolev/promptline.vim'
+  NeoBundle 'Shougo/neocomplete.vim'
 endif
