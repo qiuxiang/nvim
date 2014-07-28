@@ -27,7 +27,7 @@ let g:indentLine_char = '┆'
 let g:indentLine_color_term = 237
 let g:indentLine_color_tty_dark = 0
 let g:indentLine_faster = 1
-let g:indentLine_noConcealCursor = ''
+let g:indentLine_noConcealCursor = 0
 let g:indentLine_fileTypeExclude = ['stylus', 'jade', 'nerdtree']
 
 let mapleader = ','
