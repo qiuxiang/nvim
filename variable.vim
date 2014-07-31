@@ -5,10 +5,20 @@ let g:nerdtree_tabs_open_on_gui_startup = 0
 let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_auto_select = 1
 let g:neocomplcache_enable_at_startup = 1
+if !exists('g:neocomplcache_omni_patterns')
+  let g:neocomplcache_omni_patterns = {}
+endif
+let g:neocomplcache_omni_patterns.python = ''
+let g:neocomplcache_omni_patterns.ruby = ''
 
 let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#enable_auto_select = 1
 let g:neocomplete#enable_at_startup = 1
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+let g:neocomplete#sources#omni#input_patterns.python = ''
+let g:neocomplete#sources#omni#input_patterns.ruby = ''
 
 let g:syntastic_python_checkers = ['python']
 let g:syntastic_css_checkers = ['csslint']
