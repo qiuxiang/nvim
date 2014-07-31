@@ -28,7 +28,7 @@ let g:vimfiler_tree_leaf_icon = ''
 let g:tagbar_left = 1
 let g:tagbar_compact = 1
 
-let g:airline_theme = 'laederon'
+let g:airline_theme = 'bubblegum'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tab_nr = 0
 let g:airline#extensions#tabline#formatter = 'unique_tail'
@@ -63,4 +63,10 @@ else
         \ 'truncation' : '...',
         \ 'vcs_branch' : "\ue0a0 ",
         \ 'space' : ' '}
+  let g:promptline_preset = {
+        \ 'a' : ["\u266b"],
+        \ 'b' : [promptline#slices#vcs_branch()],
+        \ 'c' : [promptline#slices#cwd()],
+        \ 'options': {
+        \   'left_sections' : ['a', 'b', 'c']}}
 endif
