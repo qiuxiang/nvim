@@ -1,3 +1,12 @@
+set guitablabel=\ %t\ %M
+set nowrap
+set number
+set ruler
+set cursorline
+set laststatus=2
+set wildmenu
+set completeopt=longest,menu
+
 if has('gui_running')
   set guioptions-=m
   set guioptions-=T
@@ -19,5 +28,4 @@ else
 endif
 
 color Tomorrow-Night-Eighties
-
 highlight clear SignColumn

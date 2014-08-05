@@ -1,13 +1,3 @@
-set fileencodings=utf-8,gb18030
-set guitablabel=\ %t\ %M
-set number
-set nowrap
-set ruler
-set laststatus=2
-set wildmenu
-set completeopt=longest,menu
-set cursorline
- 
 syntax on
 filetype on
 filetype plugin on
@@ -27,6 +17,7 @@ set smartcase
 set incsearch
 set hlsearch
  
+set fileencodings=utf-8,gb18030
 set backspace=indent,eol,start
 set bsdir=buffer
 set autochdir
