@@ -31,5 +31,4 @@ NeoBundle 'tpope/vim-fugitive'
 
 if !has('win32')
   NeoBundle 'Yggdroot/indentLine'
-  NeoBundle 'edkolev/promptline.vim'
 endif

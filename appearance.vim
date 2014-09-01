@@ -27,5 +27,5 @@ else
   set guifont=Source\ Code\ Pro\ for\ Powerline\ Regular\ 10
 endif
 
-color Tomorrow-Night-Eighties
+" color Tomorrow-Night-Eighties
 highlight clear SignColumn

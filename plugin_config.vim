@@ -28,12 +28,12 @@ let g:vimfiler_tree_leaf_icon = ''
 let g:tagbar_left = 1
 let g:tagbar_compact = 1
 
-let g:airline_theme = 'bubblegum'
+let g:airline_theme = 'sol'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tab_nr = 0
-let g:airline#extensions#tabline#formatter = 'unique_tail'
+"let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-let g:indentLine_char = '┆'
+"let g:indentLine_char = '┆'
 let g:indentLine_color_term = 237
 let g:indentLine_color_tty_dark = 0
 let g:indentLine_faster = 1
@@ -51,22 +51,4 @@ else
 
   let g:airline_powerline_fonts = 1
   let g:airline#extensions#tabline#close_symbol = "\u00d7"
-  let g:airline#extensions#promptline#snapshot_file = '~/.shell_prompt.sh'
-  let g:airline#extensions#promptline#enabled = 1
-
-  let g:promptline_symbols = {
-        \ 'left' : "\ue0b0",
-        \ 'right' : "\ue0b2",
-        \ 'left_alt' : "\ue0b1",
-        \ 'right_alt' : "\ue0b3",
-        \ 'dir_sep' : " \ue0b1 ",
-        \ 'truncation' : '...',
-        \ 'vcs_branch' : "\ue0a0 ",
-        \ 'space' : ' '}
-  let g:promptline_preset = {
-        \ 'a' : ["\u266b"],
-        \ 'b' : [promptline#slices#vcs_branch()],
-        \ 'c' : [promptline#slices#cwd()],
-        \ 'options': {
-        \   'left_sections' : ['a', 'b', 'c']}}
 endif
