@@ -28,12 +28,10 @@ let g:vimfiler_tree_leaf_icon = ''
 let g:tagbar_left = 1
 let g:tagbar_compact = 1
 
-let g:airline_theme = 'sol'
+let g:airline_theme = 'tomorrow'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tab_nr = 0
-"let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-"let g:indentLine_char = '┆'
 let g:indentLine_color_term = 237
 let g:indentLine_color_tty_dark = 0
 let g:indentLine_faster = 1
