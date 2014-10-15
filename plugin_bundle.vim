@@ -8,10 +8,10 @@ NeoBundle 'elzr/vim-json'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'klen/python-mode'
 
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'Shougo/neocomplcache.vim'
-
 
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-fugitive'
