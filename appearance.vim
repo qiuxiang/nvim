@@ -14,7 +14,7 @@ if has('gui_running')
   set lines=36 columns=86
 
   "set guifont=Consolas:h11:cANSI
-  set guifont=Droid\ Sans\ Mono\ 10
+  set guifont=Droid\ Sans\ Mono\ 11
 endif
 
 color Tomorrow-Night-Eighties
