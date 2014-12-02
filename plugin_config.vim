@@ -9,6 +9,9 @@ let g:neocomplcache_omni_patterns.python = ''
 
 let g:syntastic_python_checkers = ['python']
 
+let g:pymode_options_colorcolumn = 0
+let g:pymode_folding = 0
+
 let g:gitgutter_sign_added = '+'
 let g:gitgutter_sign_modified = '~'
 let g:gitgutter_sign_removed = '_'
