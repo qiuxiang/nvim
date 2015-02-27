@@ -14,10 +14,6 @@ NeoBundle 'ap/vim-css-color'
 
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'Shougo/neocomplete.vim'
-
-NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'chriskempson/vim-tomorrow-theme'
 
 call neobundle#end()

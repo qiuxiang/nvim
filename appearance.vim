@@ -12,7 +12,7 @@ if has('gui_running')
   set guioptions-=b
   set guioptions-=e
   set lines=36 columns=86
-
   set guifont=Ubuntu\ Mono\ 13
-  color Tomorrow-Night-Eighties
 endif
+
+color desert
