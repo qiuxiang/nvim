@@ -22,3 +22,5 @@ set backspace=indent,eol,start
 set autochdir
 set noswapfile
 set mouse=a
+
+set shell=/bin/zsh
