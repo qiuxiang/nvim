@@ -10,15 +10,10 @@ NeoBundle 'othree/html5.vim'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'tfnico/vim-gradle'
-NeoBundle 'klen/python-mode'
 NeoBundle 'ap/vim-css-color'
 
 NeoBundle 'mattn/emmet-vim'
-NeoBundle 'Shougo/neocomplcache.vim'
-
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'gregsexton/gitv'
+NeoBundle 'Shougo/neocomplete.vim'
 
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'itchyny/lightline.vim'
