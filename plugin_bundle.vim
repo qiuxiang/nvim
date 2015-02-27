@@ -14,6 +14,5 @@ NeoBundle 'ap/vim-css-color'
 
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'itchyny/lightline.vim'
 
 call neobundle#end()
