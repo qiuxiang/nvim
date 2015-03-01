@@ -23,4 +23,4 @@ set autochdir
 set noswapfile
 set mouse=a
 
-set shell=/bin/zsh
+set shell=/bin/sh
