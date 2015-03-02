@@ -1,3 +1,3 @@
 ```
-curl -L http://git.io/doubanfm.sh | sh
+$ curl -L http://git.io/xc5P | sh
 ```
