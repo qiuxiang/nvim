@@ -19,7 +19,6 @@ set hlsearch
  
 set fileencodings=utf-8,gb18030
 set backspace=indent,eol,start
-set autochdir
 set noswapfile
 set mouse=a
 
