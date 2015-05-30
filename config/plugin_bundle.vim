@@ -15,6 +15,7 @@ NeoBundle 'ap/vim-css-color'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'Shougo/neocomplete.vim'
 "NeoBundle 'Shougo/neocomplcache.vim'
-NeoBundle 'joonty/vdebug'
+"NeoBundle 'joonty/vdebug'
+"NeoBundle 'kien/ctrlp.vim'
 
 call neobundle#end()
