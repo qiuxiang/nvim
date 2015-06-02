@@ -12,11 +12,11 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'tfnico/vim-gradle'
 NeoBundle 'ap/vim-css-color'
 
-NeoBundle 'mattn/emmet-vim'
 "NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neocomplcache.vim'
-"NeoBundle 'joonty/vdebug'
-"NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'joonty/vdebug'
+NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'mkitt/tabline.vim'
+NeoBundle 'mattn/emmet-vim'
 
 call neobundle#end()
