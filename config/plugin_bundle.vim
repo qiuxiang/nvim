@@ -17,5 +17,6 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'Shougo/neocomplcache.vim'
 "NeoBundle 'joonty/vdebug'
 "NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'mkitt/tabline.vim'
 
 call neobundle#end()
