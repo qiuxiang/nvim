@@ -12,8 +12,12 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'tfnico/vim-gradle'
 NeoBundle 'ap/vim-css-color'
 
-"NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Shougo/neocomplcache.vim'
+if has('lua')
+  NeoBundle 'Shougo/neocomplete.vim'
+else
+  NeoBundle 'Shougo/neocomplcache.vim'
+endif
+
 NeoBundle 'joonty/vdebug'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'mkitt/tabline.vim'
