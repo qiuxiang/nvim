@@ -19,7 +19,6 @@ else
 endif
 
 NeoBundle 'joonty/vdebug'
-NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'mkitt/tabline.vim'
 NeoBundle 'mattn/emmet-vim'
 
