@@ -13,5 +13,5 @@ let g:vim_json_syntax_conceal = 0
 let g:vdebug_options = { 'marker_default': '*' }
 
 let g:netrw_banner = 0
+let g:netrw_liststyle = 3
 let g:netrw_list_hide = '^\.'
-
