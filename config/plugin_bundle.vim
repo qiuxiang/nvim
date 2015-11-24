@@ -21,5 +21,6 @@ endif
 NeoBundle 'joonty/vdebug'
 NeoBundle 'mkitt/tabline.vim'
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'editorconfig/editorconfig-vim'
 
 call neobundle#end()
