@@ -19,5 +19,5 @@ Plug 'gcmt/taboo.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'maralla/completor.vim', { 'do': 'make js' }
+" Plug 'maralla/completor.vim', { 'do': 'make js' }
 call plug#end()
