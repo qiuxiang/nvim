@@ -3,6 +3,8 @@ filetype on
 filetype plugin on
 filetype plugin indent on
 
+set nowrap
+
 set ignorecase
 set smartcase
 set incsearch
