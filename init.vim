@@ -4,6 +4,7 @@ filetype plugin on
 filetype plugin indent on
 
 set nowrap
+set noswapfile
 
 set ignorecase
 set smartcase
@@ -17,9 +18,16 @@ let g:netrw_list_hide = '^\.'
 call plug#begin()
 Plug 'mattn/emmet-vim'
 Plug 'ap/vim-css-color'
+Plug 'pangloss/vim-javascript'
 Plug 'gcmt/taboo.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
-" Plug 'maralla/completor.vim', { 'do': 'make js' }
+Plug 'prettier/vim-prettier'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+endif
 call plug#end()
+call deoplete#enable()
