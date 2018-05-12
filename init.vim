@@ -16,11 +16,13 @@ let g:netrw_liststyle = 3
 let g:netrw_list_hide = '^\.'
 
 let g:ale_set_signs = 0
+let g:deoplete#sources#ternjs#types = 1
 
 call plug#begin()
 Plug 'mattn/emmet-vim'
 Plug 'ap/vim-css-color'
 Plug 'pangloss/vim-javascript'
+Plug 'carlitux/deoplete-ternjs'
 Plug 'gcmt/taboo.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
