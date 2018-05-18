@@ -5,6 +5,7 @@ filetype plugin indent on
 
 set nowrap
 set noswapfile
+set wildmenu
 
 set ignorecase
 set smartcase
@@ -34,6 +35,8 @@ if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
   Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
 endif
 call plug#end()
 call deoplete#enable()
