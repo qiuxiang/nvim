@@ -6,6 +6,7 @@ filetype plugin indent on
 set nowrap
 set noswapfile
 set wildmenu
+set completeopt-=preview
 
 set ignorecase
 set smartcase
@@ -31,6 +32,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'prettier/vim-prettier'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-fugitive'
+Plug 'dracula/vim'
+Plug 'zchee/deoplete-jedi'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
