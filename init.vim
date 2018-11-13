@@ -19,6 +19,7 @@ let g:netrw_list_hide = '^\.'
 
 let g:ale_set_signs = 0
 let g:deoplete#sources#ternjs#types = 1
+let g:deoplete#enable_at_startup = 1
 
 call plug#begin()
 Plug 'mattn/emmet-vim'
@@ -42,4 +43,3 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 call plug#end()
-call deoplete#enable()
