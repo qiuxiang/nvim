@@ -7,6 +7,7 @@ set nowrap
 set noswapfile
 set wildmenu
 set completeopt-=preview
+set signcolumn=yes
 
 set ignorecase
 set smartcase
@@ -17,29 +18,20 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_list_hide = '^\.'
 
-let g:ale_set_signs = 0
-let g:deoplete#sources#ternjs#types = 1
-let g:deoplete#enable_at_startup = 1
+let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
+let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'
 
 call plug#begin()
+Plug 'vim-airline/vim-airline'
 Plug 'mattn/emmet-vim'
 Plug 'ap/vim-css-color'
-Plug 'pangloss/vim-javascript'
-Plug 'carlitux/deoplete-ternjs'
-Plug 'gcmt/taboo.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'prettier/vim-prettier'
-Plug 'w0rp/ale'
+Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'dracula/vim'
-Plug 'zchee/deoplete-jedi'
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'HerringtonDarkholme/yats.vim'
 call plug#end()
+
+source ~/.config/nvim/coc.vim
