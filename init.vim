@@ -7,7 +7,6 @@ set nowrap
 set noswapfile
 set wildmenu
 set completeopt-=preview
-set signcolumn=yes
 
 set ignorecase
 set smartcase
@@ -30,8 +29,9 @@ Plug 'prettier/vim-prettier'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'dracula/vim'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'HerringtonDarkholme/yats.vim'
 call plug#end()
 
+colorscheme dracula
 source ~/.config/nvim/coc.vim
