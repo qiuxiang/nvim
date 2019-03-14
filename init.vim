@@ -7,6 +7,7 @@ set nowrap
 set noswapfile
 set wildmenu
 set completeopt-=preview
+set background=dark
 
 set ignorecase
 set smartcase
@@ -16,6 +17,7 @@ set hlsearch
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_list_hide = '^\.'
+let g:netrw_keepdir = 0
 
 let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
 let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'
@@ -33,5 +35,4 @@ Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'HerringtonDarkholme/yats.vim'
 call plug#end()
 
-colorscheme dracula
 source ~/.config/nvim/coc.vim
