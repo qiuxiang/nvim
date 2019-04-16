@@ -16,7 +16,7 @@ set hlsearch
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-let g:netrw_list_hide = '^\.'
+let g:netrw_list_hide = '\.git$,\.idea,\.gradle'
 let g:netrw_keepdir = 0
 
 let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
@@ -24,6 +24,7 @@ let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_
 
 call plug#begin()
 Plug 'vim-airline/vim-airline'
+Plug 'gcmt/taboo.vim'
 Plug 'mattn/emmet-vim'
 Plug 'ap/vim-css-color'
 Plug 'editorconfig/editorconfig-vim'
