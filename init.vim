@@ -8,6 +8,7 @@ set noswapfile
 set wildmenu
 set completeopt-=preview
 set background=dark
+set termguicolors
 
 set ignorecase
 set smartcase
@@ -26,10 +27,7 @@ call plug#begin()
 Plug 'vim-airline/vim-airline'
 Plug 'gcmt/taboo.vim'
 Plug 'mattn/emmet-vim'
-Plug 'ap/vim-css-color'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'prettier/vim-prettier'
-Plug 'airblade/vim-gitgutter'
 Plug 'lambdalisue/gina.vim'
 Plug 'dracula/vim'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
