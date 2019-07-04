@@ -17,7 +17,7 @@ set hlsearch
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-let g:netrw_list_hide = '\.git/,\.idea,\.gradle'
+let g:netrw_list_hide = '^\.git/,^\.idea,^\.gradle'
 let g:netrw_keepdir = 0
 
 let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
@@ -32,6 +32,9 @@ Plug 'lambdalisue/gina.vim'
 Plug 'dracula/vim'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'Shougo/defx.nvim', {'do': ':UpdateRemotePlugins'}
+Plug 'kristijanhusak/defx-git'
 call plug#end()
 
 source ~/.config/nvim/coc.vim
+source ~/.config/nvim/defx.vim

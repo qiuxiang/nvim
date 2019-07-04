@@ -22,4 +22,4 @@ nnoremap <silent> <space>k :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p :<C-u>CocListResume<CR>
 
-nmap <leader>f :<C-u>CocCommand prettier.formatFile<cr>
+map <leader>f <Plug>(coc-format)
