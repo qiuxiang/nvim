@@ -18,4 +18,5 @@ function! s:defx_settings()
   nnoremap <silent><buffer><expr> s    defx#do_action('toggle_select')
 endfunction
 autocmd FileType defx call <SID>defx_settings()
-call defx#custom#column('filename', {'max_width': 66})
+call defx#custom#column('filename', {'max_width': 72})
+call defx#custom#option('_', {'columns': 'mark:git:indent:icon:filename:size:time'})

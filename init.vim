@@ -30,7 +30,7 @@ Plug 'mattn/emmet-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'lambdalisue/gina.vim'
 Plug 'dracula/vim'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'Shougo/defx.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'kristijanhusak/defx-git'
