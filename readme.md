@@ -1,4 +1,6 @@
 ```shell
+pip install pynvim
+
 # vim
 git clone https://github.com/qiuxiang/.vim.git ~/.vim
 echo "source ~/.vim/init.vim" > ~/.vimrc
