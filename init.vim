@@ -7,8 +7,7 @@ set nowrap
 set noswapfile
 set wildmenu
 set completeopt-=preview
-set background=dark
-set termguicolors
+set background=light
 
 highlight clear SignColumn
 set signcolumn=yes
@@ -21,7 +20,7 @@ set hlsearch
 set nobackup
 set nowritebackup
 
-" For macos terminal
+" For macOS terminal
 if $TERM != "xterm-256color"
   set termguicolors
 endif
@@ -50,4 +49,4 @@ call plug#end()
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/defx.vim
 
-colorscheme dracula
+" colorscheme dracula
