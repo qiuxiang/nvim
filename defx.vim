@@ -25,10 +25,10 @@ call defx#custom#option('_', {'columns': 'mark:git:indent:icon:filename:size:tim
 let g:defx_git#indicators = {
   \ 'Modified'  : '~',
   \ 'Staged'    : '✔',
-  \ 'Untracked' : '✚',
+  \ 'Untracked' : '+',
   \ 'Renamed'   : '→',
-  \ 'Unmerged'  : '═',
+  \ 'Unmerged'  : '≈',
   \ 'Ignored'   : '☒',
-  \ 'Deleted'   : '✖',
+  \ 'Deleted'   : '×',
   \ 'Unknown'   : '?'
   \ }

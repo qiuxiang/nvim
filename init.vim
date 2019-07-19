@@ -10,10 +10,21 @@ set completeopt-=preview
 set background=dark
 set termguicolors
 
+highlight clear SignColumn
+set signcolumn=yes
+
 set ignorecase
 set smartcase
 set incsearch
 set hlsearch
+
+set nobackup
+set nowritebackup
+
+" For macos terminal
+if $TERM != "xterm-256color"
+  set termguicolors
+endif
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
@@ -38,3 +49,5 @@ call plug#end()
 
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/defx.vim
+
+colorscheme dracula
