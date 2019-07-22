@@ -7,7 +7,7 @@ set nowrap
 set noswapfile
 set wildmenu
 set completeopt-=preview
-set background=light
+set background=dark
 
 highlight clear SignColumn
 set signcolumn=yes
@@ -20,29 +20,25 @@ set hlsearch
 set nobackup
 set nowritebackup
 
-" For macOS terminal
-if $TERM != "xterm-256color"
+if $TERM != 'xterm'
   set termguicolors
 endif
 
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_list_hide = '^\.git/,^\.idea,^\.gradle'
-let g:netrw_keepdir = 0
-
-let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
-let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'
+let g:lightline = {
+  \ 'colorscheme': 'powerline',
+  \ 'separator': { 'left': '', 'right': '' },
+  \ 'subseparator': { 'left': '', 'right': '' },
+  \ }
 
 call plug#begin()
-Plug 'vim-airline/vim-airline'
-Plug 'gcmt/taboo.vim'
+Plug 'itchyny/lightline.vim'
 Plug 'mattn/emmet-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'lambdalisue/gina.vim'
 Plug 'dracula/vim'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', { 'do': { -> coc#util#install() } }
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'Shougo/defx.nvim', {'do': ':UpdateRemotePlugins'}
+Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kristijanhusak/defx-git'
 call plug#end()
 
