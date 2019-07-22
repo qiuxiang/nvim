@@ -8,9 +8,8 @@ set noswapfile
 set wildmenu
 set completeopt-=preview
 set background=dark
-
-highlight clear SignColumn
 set signcolumn=yes
+highlight clear SignColumn
 
 set ignorecase
 set smartcase

@@ -19,8 +19,8 @@ function! s:defx_settings()
 endfunction
 autocmd FileType defx call <SID>defx_settings()
 
-call defx#custom#column('filename', {'max_width': 72})
-call defx#custom#option('_', {'columns': 'mark:git:indent:icon:filename:size:time'})
+call defx#custom#column('filename', { 'max_width': 72 })
+call defx#custom#option('_', { 'columns': 'mark:git:indent:icon:filename:size:time' })
 
 let g:defx_git#indicators = {
   \ 'Modified'  : '~',
