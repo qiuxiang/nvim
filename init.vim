@@ -7,7 +7,7 @@ set nowrap
 set noswapfile
 set wildmenu
 set completeopt-=preview
-set background=dark
+set background=light
 set signcolumn=yes
 highlight clear SignColumn
 
@@ -19,15 +19,9 @@ set hlsearch
 set nobackup
 set nowritebackup
 
-if $TERM != 'xterm'
+if $TERM != 'xterm-256color'
   set termguicolors
 endif
-
-let g:lightline = {
-  \ 'colorscheme': 'powerline',
-  \ 'separator': { 'left': '', 'right': '' },
-  \ 'subseparator': { 'left': '', 'right': '' },
-  \ }
 
 call plug#begin()
 Plug 'itchyny/lightline.vim'
@@ -35,6 +29,7 @@ Plug 'mattn/emmet-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'lambdalisue/gina.vim'
 Plug 'dracula/vim'
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'neoclide/coc.nvim', { 'do': { -> coc#util#install() } }
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -43,5 +38,7 @@ call plug#end()
 
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/defx.vim
+source ~/.config/nvim/lightline.vim
+source ~/.config/nvim/gina.vim
 
 " colorscheme dracula

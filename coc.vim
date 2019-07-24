@@ -1,9 +1,9 @@
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+map gd <Plug>(coc-definition)
+map gy <Plug>(coc-type-definition)
+map gi <Plug>(coc-implementation)
+map gr <Plug>(coc-references)
 
-nnoremap <silent> <space>a :<C-u>CocList diagnostics<cr>
-nnoremap <silent> <space>e :<C-u>CocList extensions<cr>
+map <leader>a :CocList diagnostics<cr>
+map <leader>e :CocList extensions<cr>
 
 map <leader>f <Plug>(coc-format)
