@@ -21,6 +21,7 @@ set nowritebackup
 
 call plug#begin()
 Plug 'itchyny/lightline.vim'
+Plug 'edkolev/tmuxline.vim'
 Plug 'mattn/emmet-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'lambdalisue/gina.vim'
@@ -36,4 +37,4 @@ source ~/.config/nvim/defx.vim
 source ~/.config/nvim/lightline.vim
 source ~/.config/nvim/gina.vim
 
-"colorscheme dracula
+colorscheme dracula
