@@ -1,2 +1,2 @@
-map gs :Gina status<cr>
-map gm :Gina commit<cr>
+map <leader>gs :Gina status<cr>
+map <leader>gm :Gina commit<cr>
