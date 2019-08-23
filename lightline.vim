@@ -1,5 +1,5 @@
 let g:lightline = {
-  \ 'colorscheme': 'powerline',
+  \ 'colorscheme': 'dracula',
   \ 'separator': { 'left': '', 'right': '' },
   \ 'subseparator': { 'left': '', 'right': '' },
   \ }

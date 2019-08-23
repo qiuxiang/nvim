@@ -7,8 +7,8 @@ set nowrap
 set noswapfile
 set wildmenu
 set completeopt-=preview
-set background=light
 set signcolumn=yes
+set termguicolors
 highlight clear SignColumn
 
 set ignorecase
@@ -19,17 +19,12 @@ set hlsearch
 set nobackup
 set nowritebackup
 
-if $TERM != 'xterm-256color'
-  set termguicolors
-endif
-
 call plug#begin()
 Plug 'itchyny/lightline.vim'
 Plug 'mattn/emmet-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'lambdalisue/gina.vim'
 Plug 'dracula/vim'
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'neoclide/coc.nvim', { 'do': { -> coc#util#install() } }
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -41,4 +36,4 @@ source ~/.config/nvim/defx.vim
 source ~/.config/nvim/lightline.vim
 source ~/.config/nvim/gina.vim
 
-" colorscheme dracula
+"colorscheme dracula
