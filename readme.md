@@ -1,18 +1,7 @@
 ```shell
 pip install pynvim
-
-# vim
-git clone https://github.com/qiuxiang/.vim.git ~/.vim
-echo "source ~/.vim/init.vim" > ~/.vimrc
-
-# nvim
-git clone https://github.com/qiuxiang/.vim.git ~/.config/nvim
-
+git clone https://github.com/qiuxiang/.vim.git .config/nvim
+cp .config/nvim/.tmux.conf .
 vi -c "PlugInstall"
-vi -c "CocInstall coc-json coc-css coc-tsserver coc-git"
-```
-
-.tmux.conf:
-```shell
-set -sg escape-time 10
+vi -c "CocInstall coc-json coc-css coc-highlight coc-tsserver coc-git"
 ```
