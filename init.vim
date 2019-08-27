@@ -9,7 +9,6 @@ set wildmenu
 set completeopt-=preview
 set signcolumn=yes
 set termguicolors
-highlight clear SignColumn
 
 set ignorecase
 set smartcase
@@ -38,3 +37,4 @@ source ~/.config/nvim/lightline.vim
 source ~/.config/nvim/gina.vim
 
 colorscheme dracula
+highlight Normal guibg=NONE
