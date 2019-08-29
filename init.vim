@@ -27,6 +27,7 @@ Plug 'lambdalisue/gina.vim'
 Plug 'dracula/vim'
 Plug 'neoclide/coc.nvim', { 'do': { -> coc#util#install() } }
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'pangloss/vim-javascript'
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kristijanhusak/defx-git'
 call plug#end()
