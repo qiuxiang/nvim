@@ -23,7 +23,7 @@ call defx#custom#option('_', { 'columns': 'git:indent:icon:filename:size:time' }
 
 let g:defx_git#indicators = {
   \ 'Modified'  : '~',
-  \ 'Staged'    : '✔',
+  \ 'Staged'    : '✓',
   \ 'Untracked' : '+',
   \ 'Renamed'   : '→',
   \ 'Unmerged'  : '≈',
