@@ -7,7 +7,6 @@ set nowrap
 set noswapfile
 set wildmenu
 set completeopt-=preview
-set signcolumn=yes
 set termguicolors
 
 set ignorecase
