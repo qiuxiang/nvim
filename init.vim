@@ -31,10 +31,11 @@ Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kristijanhusak/defx-git'
 call plug#end()
 
-source ~/.config/nvim/coc.vim
-source ~/.config/nvim/defx.vim
-source ~/.config/nvim/lightline.vim
-source ~/.config/nvim/gina.vim
+let $RUNTIME = fnamemodify($MYVIMRC, ':p:h')
+source $RUNTIME/coc.vim
+source $RUNTIME/defx.vim
+source $RUNTIME/lightline.vim
+source $RUNTIME/gina.vim
 
 colorscheme dracula
 highlight Normal guibg=NONE
