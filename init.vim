@@ -27,13 +27,11 @@ Plug 'dracula/vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'pangloss/vim-javascript'
-Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'kristijanhusak/defx-git'
+Plug 'dart-lang/dart-vim-plugin'
 call plug#end()
 
 let $RUNTIME = fnamemodify($MYVIMRC, ':p:h')
 source $RUNTIME/coc.vim
-source $RUNTIME/defx.vim
 source $RUNTIME/lightline.vim
 source $RUNTIME/gina.vim
 
