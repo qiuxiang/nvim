@@ -37,3 +37,6 @@ source $RUNTIME/gina.vim
 
 colorscheme dracula
 highlight Normal guibg=NONE
+
+map gb :bnext<cr>
+map gB :bprev<cr>
