@@ -1,6 +1,5 @@
 ```shell
-pip install pynvim
-git clone https://github.com/qiuxiang/nvim.git .config/nvim
-cp .config/nvim/.tmux.conf .
+git clone https://github.com/qiuxiang/nvim.git ~/.config/nvim
+cp ~/.config/nvim/.tmux.conf ~
 vi -c "PlugInstall"
 ```
