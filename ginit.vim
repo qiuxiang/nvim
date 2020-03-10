@@ -1,2 +1,2 @@
-Guifont Hack:h11
+Guifont Hack:h10
 colorscheme dracula

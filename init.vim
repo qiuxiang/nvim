@@ -8,6 +8,7 @@ set noswapfile
 set wildmenu
 set completeopt-=preview
 set termguicolors
+set mouse=a
 
 set ignorecase
 set smartcase
