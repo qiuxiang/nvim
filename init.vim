@@ -29,6 +29,7 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'dart-lang/dart-vim-plugin'
+Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 let $RUNTIME = fnamemodify($MYVIMRC, ':p:h')
@@ -36,7 +37,8 @@ source $RUNTIME/coc.vim
 source $RUNTIME/lightline.vim
 source $RUNTIME/gina.vim
 
-colorscheme dracula
+set background=light
+colorscheme solarized8_high
 highlight Normal guibg=NONE
 
 map gb :bnext<cr>
