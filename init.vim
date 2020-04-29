@@ -37,9 +37,10 @@ source $RUNTIME/coc.vim
 source $RUNTIME/lightline.vim
 source $RUNTIME/gina.vim
 
-set background=light
-colorscheme solarized8_high
-highlight Normal guibg=NONE
+" set background=light
+" colorscheme solarized8_high
+highlight Normal guibg=none
+highlight SignColumn guibg=none
 
 map gb :bnext<cr>
 map gB :bprev<cr>
