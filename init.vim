@@ -19,8 +19,8 @@ set nobackup
 set nowritebackup
 
 call plug#begin()
-Plug 'itchyny/lightline.vim'
-Plug 'edkolev/tmuxline.vim'
+" Plug 'itchyny/lightline.vim'
+" Plug 'edkolev/tmuxline.vim'
 Plug 'mattn/emmet-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'lambdalisue/gina.vim'
@@ -30,6 +30,7 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'lifepillar/vim-solarized8'
+Plug 'udalov/kotlin-vim'
 call plug#end()
 
 let $RUNTIME = fnamemodify($MYVIMRC, ':p:h')
