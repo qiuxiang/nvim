@@ -24,7 +24,6 @@ call plug#begin()
 Plug 'mattn/emmet-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'lambdalisue/gina.vim'
-Plug 'dracula/vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'pangloss/vim-javascript'
@@ -39,9 +38,9 @@ source $RUNTIME/lightline.vim
 source $RUNTIME/gina.vim
 
 " set background=light
-" colorscheme solarized8_high
-highlight Normal guibg=none
-highlight SignColumn guibg=none
+colorscheme solarized8_high
+" highlight Normal guibg=none
+" highlight SignColumn guibg=none
 
 map gb :bnext<cr>
 map gB :bprev<cr>
