@@ -30,6 +30,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'lifepillar/vim-solarized8'
 Plug 'udalov/kotlin-vim'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'posva/vim-vue'
 call plug#end()
 
 let $RUNTIME = fnamemodify($MYVIMRC, ':p:h')
@@ -37,7 +39,7 @@ source $RUNTIME/coc.vim
 source $RUNTIME/lightline.vim
 source $RUNTIME/gina.vim
 
-" set background=light
+set background=light
 colorscheme solarized8_high
 " highlight Normal guibg=none
 " highlight SignColumn guibg=none

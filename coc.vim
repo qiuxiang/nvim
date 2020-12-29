@@ -1,6 +1,15 @@
 set updatetime=500
 
-let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-html', 'coc-css', 'coc-highlight', 'coc-git', 'coc-prettier', 'coc-explorer']
+let g:coc_global_extensions = [
+  \ 'coc-tsserver',
+  \ 'coc-json',
+  \ 'coc-html',
+  \ 'coc-css',
+  \ 'coc-highlight',
+  \ 'coc-git',
+  \ 'coc-prettier',
+  \ 'coc-explorer',
+  \ 'coc-snippets']
 
 map gd <Plug>(coc-definition)
 map gy <Plug>(coc-type-definition)
@@ -47,5 +56,3 @@ nnoremap <silent><nowait> <space>a :<C-u>CocList diagnostics<cr>
 nnoremap <silent><nowait> <space>e :<C-u>CocList extensions<cr>
 " Find symbol of current document.
 nnoremap <silent><nowait> <space>o :<C-u>CocList outline<cr>
-
-hi! link CocExplorerGitContentChange Statement
