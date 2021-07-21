@@ -34,9 +34,9 @@ Plug 'posva/vim-vue'
 call plug#end()
 
 let $RUNTIME = fnamemodify($MYVIMRC, ':p:h')
-" source $RUNTIME/coc.vim
-" source $RUNTIME/lightline.vim
-" source $RUNTIME/gina.vim
+source $RUNTIME/coc.vim
+source $RUNTIME/lightline.vim
+source $RUNTIME/gina.vim
 
 set background=light
 " colorscheme solarized8_high
@@ -45,3 +45,6 @@ highlight SignColumn guibg=none
 
 map gb :bnext<cr>
 map gB :bprev<cr>
+
+" Highlight the symbol and its references when holding the cursor.
+" autocmd CursorHold * silent call CocActionAsync('highlight')
