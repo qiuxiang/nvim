@@ -1,5 +1,4 @@
 {
-  "npm.binPath": "pnpm",
   "coc.preferences.colorSupport": true,
   "git.addedSign.hlGroup": "GitGutterAdd",
   "git.changedSign.hlGroup": "GitGutterChange",

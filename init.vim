@@ -1,47 +1,29 @@
-syntax on
-filetype on
-filetype plugin on
-filetype plugin indent on
 set nowrap
-set noswapfile
-set wildmenu
-set completeopt-=preview
 set termguicolors
 set mouse=a
-
 set ignorecase
 set smartcase
-set incsearch
-set hlsearch
-
-set nobackup
-set nowritebackup
 
 call plug#begin()
-" Plug 'itchyny/lightline.vim'
-" Plug 'edkolev/tmuxline.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'edkolev/tmuxline.vim'
 Plug 'mattn/emmet-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'lambdalisue/gina.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'dart-lang/dart-vim-plugin'
 Plug 'lifepillar/vim-solarized8'
-Plug 'udalov/kotlin-vim'
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'posva/vim-vue'
+Plug 'github/copilot.vim'
 call plug#end()
 
-let $RUNTIME = fnamemodify($MYVIMRC, ':p:h')
-source $RUNTIME/coc.vim
-source $RUNTIME/lightline.vim
-source $RUNTIME/gina.vim
+source ~/.config/nvim/coc.vim
+source ~/.config/nvim/lightline.vim
+source ~/.config/nvim/gina.vim
 
 set background=light
 " colorscheme solarized8_high
 highlight Normal guibg=none
 highlight SignColumn guibg=none
+highlight SignColumn ctermbg=none
 
 map gb :bnext<cr>
 map gB :bprev<cr>
