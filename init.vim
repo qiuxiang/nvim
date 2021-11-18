@@ -1,12 +1,17 @@
 set nowrap
-set termguicolors
 set mouse=a
 set ignorecase
 set smartcase
 
+if $TERM_PROGRAM != "Apple_Terminal"
+  set termguicolors
+endif
+
 call plug#begin()
-Plug 'itchyny/lightline.vim'
-Plug 'edkolev/tmuxline.vim'
+if $TERM_PROGRAM != "Apple_Terminal"
+  Plug 'itchyny/lightline.vim'
+  Plug 'edkolev/tmuxline.vim'
+endif
 Plug 'mattn/emmet-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'lambdalisue/gina.vim'
