@@ -18,6 +18,8 @@ Plug 'lambdalisue/gina.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'lifepillar/vim-solarized8'
 Plug 'github/copilot.vim'
+Plug 'udalov/kotlin-vim'
+Plug 'TovarishFin/vim-solidity'
 call plug#end()
 
 source ~/.config/nvim/coc.vim
