@@ -9,8 +9,8 @@ endif
 
 call plug#begin()
 if $TERM_PROGRAM != "Apple_Terminal"
-  Plug 'itchyny/lightline.vim'
-  Plug 'edkolev/tmuxline.vim'
+  " Plug 'itchyny/lightline.vim'
+  " Plug 'edkolev/tmuxline.vim'
 endif
 Plug 'mattn/emmet-vim'
 Plug 'editorconfig/editorconfig-vim'
@@ -32,5 +32,4 @@ highlight Normal guibg=none
 highlight SignColumn guibg=none
 highlight SignColumn ctermbg=none
 
-map gb :bnext<cr>
-map gB :bprev<cr>
+" set runtimepath^=~/Projects/coc-solidity
