@@ -1,9 +1,22 @@
 {
   "colors.filetypes": ["*"],
+  "semanticTokens.filetypes": ["dart"],
   "git.addedSign.hlGroup": "GitGutterAdd",
   "git.changedSign.hlGroup": "GitGutterChange",
   "git.removedSign.hlGroup": "GitGutterDelete",
   "git.topRemovedSign.hlGroup": "GitGutterDelete",
   "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
-  "javascript.suggestionActions.enabled": false
+  "javascript.suggestionActions.enabled": false,
+  "languageserver": {
+    "tailwind": {
+      "command": "tailwindcss-language-server",
+      "filetypes": ["html", "javascriptreact", "typescriptreact"],
+      "rootPatterns": ["tailwind.config.js"],
+      "settings": {
+        "tailwindCSS": {
+          "classAttributes": ["class", "className"]
+        }
+      }
+    }
+  }
 }
