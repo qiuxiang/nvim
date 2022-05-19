@@ -16,9 +16,7 @@ Plug 'udalov/kotlin-vim'
 Plug 'TovarishFin/vim-solidity'
 call plug#end()
 
-if exists('*coc#start')
-  source ~/.config/nvim/coc.vim
-endif
+source ~/.config/nvim/coc.vim
 
 set background=light
 try
