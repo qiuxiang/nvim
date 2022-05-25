@@ -1,6 +1,7 @@
 pcall(function()
   require 'packer'.startup(function(use)
     use 'wbthomason/packer.nvim'
+    use 'prettier/vim-prettier'
     use 'github/copilot.vim'
     use 'tpope/vim-fugitive'
     use 'kyazdani42/nvim-tree.lua'
@@ -8,12 +9,13 @@ pcall(function()
     use 'editorconfig/editorconfig-vim'
     use 'nvim-treesitter/nvim-treesitter'
 
-    use 'neovim/nvim-lspconfig'
+    use 'qiuxiang/nvim-lspconfig'
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-nvim-lsp-signature-help'
     use 'saadparwaiz1/cmp_luasnip'
     use 'L3MON4D3/LuaSnip'
+    use 'b0o/schemastore.nvim'
   end)
 
   require 'nvim-tree'.setup {
@@ -21,7 +23,7 @@ pcall(function()
   }
 
   require 'nvim-treesitter.configs'.setup {
-    ensure_installed = { "solidity", "dart" },
+    ensure_installed = { "solidity", "dart", "kotlin" },
     highlight = { enable = true }
   }
 
@@ -33,5 +35,4 @@ vim.opt.mouse = 'a'
 vim.opt.termguicolors = true
 pcall(function()
   vim.cmd 'colorscheme solarized8_high'
-  vim.opt.signcolumn = 'yes'
 end)

@@ -3,11 +3,23 @@ capabilities = require 'cmp_nvim_lsp'.update_capabilities(capabilities)
 
 local lspconfig = require 'lspconfig'
 local servers = {
-  'jsonls', 'html', 'cssls', 'tsserver', 'tailwindcss',
-  'sumneko_lua', 'dartls',
+  'html', 'cssls', 'tsserver', 'jsonls', 'tailwindcss',
+  'sumneko_lua', 'dartls', 'solidity',
+}
+local settings = {
+  json = {
+    schemas = require('schemastore').json.schemas(),
+    validate = { enable = true },
+  },
+  Lua = {
+    diagnostics = { globals = { 'vim' } },
+    workspace = {
+      library = vim.api.nvim_get_runtime_file("", true),
+    },
+  },
 }
 for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup { capabilities = capabilities }
+  lspconfig[lsp].setup { capabilities = capabilities, settings = settings }
 end
 
 local cmp = require 'cmp'
@@ -18,7 +30,11 @@ cmp.setup {
     end,
   },
   mapping = cmp.mapping.preset.insert({
-    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-Space>'] = cmp.mapping.complete({}),
+    ['<CR>'] = cmp.mapping.confirm {
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    },
   }),
   sources = {
     { name = 'nvim_lsp' },
@@ -28,7 +44,8 @@ cmp.setup {
 }
 
 vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {})
+vim.api.nvim_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', {})
 vim.api.nvim_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {})
 vim.api.nvim_set_keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', {})
 vim.api.nvim_set_keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', {})
-vim.api.nvim_set_keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', {})
+vim.api.nvim_set_keymap('n', '<leader>a', '<cmd>lua vim.lsp.buf.code_action()<CR>', {})
