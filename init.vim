@@ -14,6 +14,7 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'github/copilot.vim'
 Plug 'honza/vim-snippets'
 Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'kyazdani42/nvim-tree.lua'
 call plug#end()
 
 runtime coc.vim
@@ -24,9 +25,5 @@ try
   colorscheme solarized8_high
   catch
 endtry
-
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_list_hide = '^\.'
 
 set runtimepath^=~/Projects/coc-solidity
