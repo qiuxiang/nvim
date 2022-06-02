@@ -25,5 +25,7 @@ try
   colorscheme solarized8_high
   catch
 endtry
+highlight Normal guibg=none
+highlight Normal ctermbg=none
 
 set runtimepath^=~/Projects/coc-solidity
