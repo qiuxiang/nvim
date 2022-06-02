@@ -10,21 +10,21 @@ pcall(function()
     use 'nvim-treesitter/nvim-treesitter'
 
     use 'qiuxiang/nvim-lspconfig'
-    use 'hrsh7th/nvim-cmp'
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-nvim-lsp-signature-help'
-    use 'saadparwaiz1/cmp_luasnip'
-    use 'L3MON4D3/LuaSnip'
     use 'b0o/schemastore.nvim'
+    use 'ms-jpq/coq_nvim'
+    use 'ms-jpq/coq.artifacts'
+    use 'ms-jpq/coq.thirdparty'
+    use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
   end)
 
   require 'nvim-tree'.setup {
-    diagnostics = { enable = true }
+    diagnostics = { enable = true },
+    renderer = { icons = { show = { file = false, folder = false } } },
   }
 
   require 'nvim-treesitter.configs'.setup {
     ensure_installed = { "solidity", "dart", "kotlin" },
-    highlight = { enable = true }
+    highlight = { enable = true },
   }
 
   require 'lsp'
@@ -33,6 +33,7 @@ end)
 vim.opt.wrap = false
 vim.opt.mouse = 'a'
 vim.opt.termguicolors = true
+vim.opt.background = 'light'
 pcall(function()
   vim.cmd 'colorscheme solarized8_high'
 end)

@@ -1,10 +1,7 @@
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require 'cmp_nvim_lsp'.update_capabilities(capabilities)
-
 local lspconfig = require 'lspconfig'
 local servers = {
   'html', 'cssls', 'tsserver', 'jsonls', 'tailwindcss',
-  'sumneko_lua', 'dartls', 'solidity',
+  'sumneko_lua', 'solidity',
 }
 local settings = {
   json = {
@@ -13,34 +10,24 @@ local settings = {
   },
   Lua = {
     diagnostics = { globals = { 'vim' } },
-    workspace = {
-      library = vim.api.nvim_get_runtime_file("", true),
-    },
+    workspace = { library = vim.api.nvim_get_runtime_file("", true) },
+  },
+}
+vim.g.coq_settings = {
+  auto_start = 'shut-up',
+  display = {
+    icons = { mode = 'none' },
+    preview = { border = 'single' }
   },
 }
 for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup { capabilities = capabilities, settings = settings }
+  lspconfig[lsp].setup(require('coq').lsp_ensure_capabilities({
+    settings = settings
+  }))
 end
 
-local cmp = require 'cmp'
-cmp.setup {
-  snippet = {
-    expand = function(args)
-      require 'luasnip'.lsp_expand(args.body)
-    end,
-  },
-  mapping = cmp.mapping.preset.insert({
-    ['<C-Space>'] = cmp.mapping.complete({}),
-    ['<CR>'] = cmp.mapping.confirm {
-      behavior = cmp.ConfirmBehavior.Replace,
-      select = true,
-    },
-  }),
-  sources = {
-    { name = 'nvim_lsp' },
-    { name = 'nvim_lsp_signature_help' },
-    { name = 'luasnip' },
-  },
+require "flutter-tools".setup {
+  lsp = { color = { enabled = true } },
 }
 
 vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {})
