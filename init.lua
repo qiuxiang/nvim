@@ -7,9 +7,7 @@ pcall(function()
     use 'kyazdani42/nvim-tree.lua'
     use 'lifepillar/vim-solarized8'
     use 'editorconfig/editorconfig-vim'
-    use 'nvim-treesitter/nvim-treesitter'
 
-    use 'qiuxiang/nvim-lspconfig'
     use 'b0o/schemastore.nvim'
     use 'qiuxiang/nvim-lspconfig'
     use 'hrsh7th/nvim-cmp'
@@ -25,18 +23,15 @@ pcall(function()
     renderer = { icons = { show = { file = false, folder = false } } },
   }
 
-  require 'nvim-treesitter.configs'.setup {
-    ensure_installed = { "solidity", "dart", "kotlin" },
-    highlight = { enable = true },
-  }
-
   require 'lsp'
 end)
 
 vim.opt.wrap = false
 vim.opt.mouse = 'a'
 vim.opt.termguicolors = true
-vim.opt.background = 'light'
+-- vim.opt.background = 'light'
 pcall(function()
   vim.cmd 'colorscheme solarized8_high'
+  vim.cmd 'highlight Normal guibg=none'
+  vim.cmd 'highlight Normal ctermbg=none'
 end)
