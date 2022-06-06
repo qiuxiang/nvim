@@ -9,7 +9,7 @@ pcall(function()
     use 'editorconfig/editorconfig-vim'
 
     use 'b0o/schemastore.nvim'
-    use 'qiuxiang/nvim-lspconfig'
+    use 'neovim/nvim-lspconfig'
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-nvim-lsp-signature-help'
@@ -20,7 +20,7 @@ pcall(function()
 
   require 'nvim-tree'.setup {
     diagnostics = { enable = true },
-    renderer = { icons = { show = { file = false, folder = false } } },
+    view = { width = 40},
   }
 
   require 'lsp'
@@ -35,3 +35,4 @@ pcall(function()
   vim.cmd 'highlight Normal guibg=none'
   vim.cmd 'highlight Normal ctermbg=none'
 end)
+vim.cmd 'au BufNewFile,BufRead *.sol setf solidity'

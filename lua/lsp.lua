@@ -1,4 +1,14 @@
 local lspconfig = require 'lspconfig'
+local configs = require 'lspconfig.configs'
+configs.solidity = {
+  default_config = {
+    cmd = { 'solidity-ls', '--stdio' },
+    -- cmd = { 'node', '/home/i/Projects/solidity-ls/dist', '--stdio' },
+    filetypes = { 'solidity' },
+    root_dir = lspconfig.util.find_git_ancestor,
+    single_file_support = true,
+  },
+}
 local servers = {
   'html', 'cssls', 'tsserver', 'jsonls', 'tailwindcss',
   'sumneko_lua', 'solidity',
