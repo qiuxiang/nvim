@@ -13,8 +13,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'lifepillar/vim-solarized8'
 Plug 'github/copilot.vim'
 Plug 'honza/vim-snippets'
-Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'kyazdani42/nvim-tree.lua'
+
 call plug#end()
 
 runtime coc.vim
@@ -28,4 +28,4 @@ endtry
 highlight Normal guibg=none
 highlight Normal ctermbg=none
 
-set runtimepath^=~/Projects/coc-solidity
+" set runtimepath^=~/Projects/coc-solidity
