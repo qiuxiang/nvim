@@ -20,7 +20,7 @@ pcall(function()
 
   require 'nvim-tree'.setup {
     diagnostics = { enable = true },
-    view = { width = 40},
+    view = { width = 40 },
   }
 
   require 'lsp'
@@ -28,11 +28,15 @@ end)
 
 vim.opt.wrap = false
 vim.opt.mouse = 'a'
-vim.opt.termguicolors = true
 -- vim.opt.background = 'light'
-pcall(function()
-  vim.cmd 'colorscheme solarized8_high'
-  vim.cmd 'highlight Normal guibg=none'
-  vim.cmd 'highlight Normal ctermbg=none'
-end)
-vim.cmd 'au BufNewFile,BufRead *.sol setf solidity'
+
+if os.getenv("TERM_PROGRAM") ~= 'Apple_Terminal' then
+  vim.opt.termguicolors = true
+end
+
+vim.cmd [[
+  autocmd BufNewFile,BufRead *.sol setfiletype solidity
+  autocmd colorscheme * :highlight normal guibg=none
+  autocmd colorscheme * :highlight normal ctermbg=none
+  silent! colorscheme solarized8_high
+]]
