@@ -11,7 +11,7 @@ configs.solidity = {
 }
 local servers = {
   'html', 'cssls', 'tsserver', 'jsonls', 'tailwindcss',
-  'sumneko_lua', 'solidity',
+  'sumneko_lua', 'solidity', 'sourcekit',
 }
 local settings = {
   json = {
@@ -44,6 +44,8 @@ cmp.setup {
     },
   }),
   sources = {
+    { name = 'buffer' },
+    { name = 'path' },
     { name = 'nvim_lsp' },
     { name = 'nvim_lsp_signature_help' },
     { name = 'luasnip' },
