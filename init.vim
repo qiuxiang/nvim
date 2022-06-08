@@ -14,18 +14,18 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'github/copilot.vim'
 Plug 'honza/vim-snippets'
 Plug 'kyazdani42/nvim-tree.lua'
-
 call plug#end()
 
 runtime coc.vim
 lua require 'init'
 
 set background=light
-try
-  colorscheme solarized8_high
-  catch
-endtry
-highlight Normal guibg=none
-highlight Normal ctermbg=none
+silent colorscheme solarized8_high
+if !exists('g:neovide')
+  highlight Normal guibg=none
+  highlight Normal ctermbg=none
+end
 
-" set runtimepath^=~/Projects/coc-solidity
+set guifont=noto\ sans\ mono\ cjk\ sc:h12
+autocmd BufNewFile,BufRead *.sol setfiletype solidity
+" set runtimepath^=~/Documents/Projects/coc-solidity
