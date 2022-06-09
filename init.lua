@@ -31,14 +31,17 @@ end)
 vim.opt.wrap = false
 vim.opt.mouse = 'a'
 vim.opt.background = 'light'
+vim.cmd 'silent! colorscheme solarized8_high'
 
 if os.getenv("TERM_PROGRAM") ~= 'Apple_Terminal' then
   vim.opt.termguicolors = true
 end
 
-vim.cmd [[
-  autocmd BufNewFile,BufRead *.sol setfiletype solidity
-  autocmd colorscheme * :highlight normal guibg=none
-  autocmd colorscheme * :highlight normal ctermbg=none
-  silent! colorscheme solarized8_high
-]]
+if vim.g.neovide then
+  vim.opt.guifont = 'noto sans mono cjk sc:h10'
+else
+  vim.cmd 'highlight Normal guibg=none'
+  vim.cmd 'highlight Normal ctermbg=none'
+end
+
+vim.cmd 'au BufNewFile,BufRead *.sol setf solidity'
