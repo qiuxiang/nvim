@@ -22,7 +22,7 @@ pcall(function()
 
   require 'nvim-tree'.setup {
     diagnostics = { enable = true },
-    view = { width = 40 },
+    view = { width = 40, hide_root_folder = true },
   }
 
   require 'lsp'

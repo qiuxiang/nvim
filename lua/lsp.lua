@@ -11,7 +11,7 @@ configs.solidity = {
 }
 local servers = {
   'html', 'cssls', 'tsserver', 'jsonls', 'tailwindcss',
-  'sumneko_lua', 'solidity', 'sourcekit',
+  'sumneko_lua', 'solidity', 'sourcekit', 'gopls'
 }
 local settings = {
   json = {
