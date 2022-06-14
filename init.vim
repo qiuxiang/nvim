@@ -1,10 +1,3 @@
-set nowrap
-set mouse=a
-
-if $TERM_PROGRAM != "Apple_Terminal"
-  set termguicolors
-endif
-
 call plug#begin()
 Plug 'mattn/emmet-vim'
 Plug 'editorconfig/editorconfig-vim'
@@ -17,15 +10,22 @@ Plug 'kyazdani42/nvim-tree.lua'
 call plug#end()
 
 runtime coc.vim
-lua require 'init'
 
+set nowrap
+set mouse=a
 set background=light
+
+if $TERM_PROGRAM != "Apple_Terminal"
+  set termguicolors
+endif
+
 silent colorscheme solarized8_high
-if !exists('g:neovide')
+if exists('g:neovide')
+  set guifont=noto\ sans\ mono\ cjk\ sc:h10
+else
   highlight Normal guibg=none
   highlight Normal ctermbg=none
 end
 
-set guifont=noto\ sans\ mono\ cjk\ sc:h12
 autocmd BufNewFile,BufRead *.sol setfiletype solidity
 " set runtimepath^=~/Documents/Projects/coc-solidity
