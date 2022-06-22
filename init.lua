@@ -2,11 +2,11 @@ pcall(function()
   require 'packer'.startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'prettier/vim-prettier'
-    use 'github/copilot.vim'
     use 'tpope/vim-fugitive'
     use 'kyazdani42/nvim-tree.lua'
     use 'lifepillar/vim-solarized8'
     use 'editorconfig/editorconfig-vim'
+    use 'nvim-treesitter/nvim-treesitter'
 
     use 'b0o/schemastore.nvim'
     use 'neovim/nvim-lspconfig'
@@ -23,6 +23,11 @@ pcall(function()
   require 'nvim-tree'.setup {
     diagnostics = { enable = true },
     view = { width = 40, hide_root_folder = true },
+  }
+
+  require 'nvim-treesitter.configs'.setup {
+    ensure_installed = { "solidity", "kotlin" },
+    highlight = { enable = true }
   }
 
   require 'lsp'
