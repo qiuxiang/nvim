@@ -4,12 +4,13 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'lifepillar/vim-solarized8'
-Plug 'github/copilot.vim'
 Plug 'honza/vim-snippets'
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'nvim-treesitter/nvim-treesitter'
 call plug#end()
 
 runtime coc.vim
+lua require 'init'
 
 set nowrap
 set mouse=a
@@ -19,13 +20,6 @@ if $TERM_PROGRAM != "Apple_Terminal"
   set termguicolors
 endif
 
-silent colorscheme solarized8_high
-if exists('g:neovide')
-  set guifont=noto\ sans\ mono\ cjk\ sc:h10
-else
-  highlight Normal guibg=none
-  highlight Normal ctermbg=none
-end
+silent! colorscheme solarized8_high
 
-autocmd BufNewFile,BufRead *.sol setfiletype solidity
 " set runtimepath^=~/Documents/Projects/coc-solidity
