@@ -39,7 +39,9 @@ vim.opt.wrap = false
 vim.opt.mouse = 'a'
 vim.opt.updatetime = 300
 vim.opt.background = 'light'
+vim.opt.undofile = true
 vim.cmd 'silent! colorscheme solarized8_high'
+vim.cmd 'highlight Normal guibg=none'
 
 if os.getenv("TERM_PROGRAM") ~= 'Apple_Terminal' then
   vim.opt.termguicolors = true
