@@ -21,5 +21,6 @@ if $TERM_PROGRAM != "Apple_Terminal"
 endif
 
 silent! colorscheme solarized8_high
+highlight Normal guibg=none
 
 " set runtimepath^=~/Documents/Projects/coc-solidity
