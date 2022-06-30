@@ -28,7 +28,7 @@ pcall(function()
   }
 
   require 'nvim-treesitter.configs'.setup {
-    ensure_installed = { "solidity", "kotlin" },
+    ensure_installed = { "solidity", "kotlin", "fish" },
     highlight = { enable = true }
   }
 

@@ -56,7 +56,9 @@ require "flutter-tools".setup {
   lsp = { color = { enabled = true } },
 }
 
-require 'lspsaga'.init_lsp_saga {}
+require 'lspsaga'.init_lsp_saga {
+  code_action_lightbulb = { sign = false }
+}
 
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
 vim.keymap.set('n', 'gr', vim.lsp.buf.references, {})
