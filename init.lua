@@ -28,7 +28,7 @@ pcall(function()
   }
 
   require 'nvim-treesitter.configs'.setup {
-    ensure_installed = { "solidity", "kotlin", "fish" },
+    ensure_installed = { "solidity", "kotlin", "fish", "typescript", "tsx"},
     highlight = { enable = true }
   }
 
