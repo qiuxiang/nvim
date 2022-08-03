@@ -5,21 +5,25 @@ Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'lifepillar/vim-solarized8'
 Plug 'honza/vim-snippets'
-Plug 'nvim-treesitter/nvim-treesitter'
+" Plug 'nvim-treesitter/nvim-treesitter'
 call plug#end()
 
 runtime coc.vim
-lua require 'init'
+" lua require 'init'
 
 set nowrap
 set mouse=a
 set background=light
+set undofile
+set hlsearch
+set incsearch
 
 if $TERM_PROGRAM != 'Apple_Terminal'
   set termguicolors
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 
 silent! colorscheme solarized8_high
-highlight Normal guibg=none
 
 " set runtimepath^=~/Projects/coc-solidity
