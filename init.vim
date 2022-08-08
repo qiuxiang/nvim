@@ -12,6 +12,7 @@ runtime coc.vim
 set nowrap
 set mouse=a
 set background=light
+set noswapfile
 set undofile
 set undodir=~/.cache/undodir
 set hlsearch
