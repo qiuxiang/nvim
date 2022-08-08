@@ -5,16 +5,15 @@ Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'lifepillar/vim-solarized8'
 Plug 'honza/vim-snippets'
-" Plug 'nvim-treesitter/nvim-treesitter'
 call plug#end()
 
 runtime coc.vim
-" lua require 'init'
 
 set nowrap
 set mouse=a
 set background=light
 set undofile
+set undodir=~/.cache/undodir
 set hlsearch
 set incsearch
 
