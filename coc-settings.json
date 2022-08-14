@@ -7,6 +7,7 @@
   "git.topRemovedSign.hlGroup": "GitGutterDelete",
   "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
   "javascript.suggestionActions.enabled": false,
+  "css.lint.unknownAtRules": "ignore",
   "languageserver": {
     "tailwind": {
       "command": "tailwindcss-language-server",

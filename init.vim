@@ -24,6 +24,8 @@ if $TERM_PROGRAM != 'Apple_Terminal'
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 
-silent! colorscheme solarized8_high
+silent! colorscheme solarized8
+
+map <leader>m :exec &mouse == '' ? 'set mouse=a' : 'set mouse='<CR>
 
 " set runtimepath^=~/Projects/coc-solidity
