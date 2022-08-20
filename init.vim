@@ -26,6 +26,15 @@ endif
 
 silent! colorscheme solarized8
 
-map <leader>m :exec &mouse == '' ? 'set mouse=a' : 'set mouse='<CR>
+function! ToggleMouse()
+  if &mouse == 'a'
+    set mouse=
+    set paste
+  else
+    set mouse=a
+    set nopaste
+  endif
+endfunc
+map <silent> <leader>m :call ToggleMouse()<cr>
 
 " set runtimepath^=~/Projects/coc-solidity
