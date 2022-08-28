@@ -25,6 +25,7 @@ if $TERM_PROGRAM != 'Apple_Terminal'
 endif
 
 silent! colorscheme solarized8
+highlight Normal ctermbg=NONE
 
 function! ToggleMouse()
   if &mouse == 'a'
