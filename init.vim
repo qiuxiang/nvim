@@ -1,10 +1,11 @@
 call plug#begin()
-Plug 'mattn/emmet-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'lifepillar/vim-solarized8'
 Plug 'honza/vim-snippets'
+Plug 'itchyny/lightline.vim'
+Plug 'edkolev/tmuxline.vim'
 call plug#end()
 
 runtime coc.vim
@@ -26,16 +27,11 @@ endif
 
 silent! colorscheme solarized8
 highlight Normal ctermbg=NONE
+highlight Normal guibg=NONE
 
-function! ToggleMouse()
-  if &mouse == 'a'
-    set mouse=
-    set paste
-  else
-    set mouse=a
-    set nopaste
-  endif
-endfunc
-map <silent> <leader>m :call ToggleMouse()<cr>
-
-" set runtimepath^=~/Projects/coc-solidity
+map <leader>t :Tmuxline lightline<cr>
+let g:lightline = {
+  \ 'colorscheme': 'solarized',
+  \ 'separator': { 'left': '', 'right': '' },
+  \ 'subseparator': { 'left': '', 'right': '' },
+  \ }
