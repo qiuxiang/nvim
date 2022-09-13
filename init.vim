@@ -6,6 +6,7 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'honza/vim-snippets'
 Plug 'itchyny/lightline.vim'
 Plug 'edkolev/tmuxline.vim'
+Plug 'ojroques/vim-oscyank'
 call plug#end()
 
 runtime coc.vim
@@ -28,3 +29,6 @@ let g:lightline = {
   \ 'separator': { 'left': '', 'right': '' },
   \ 'subseparator': { 'left': '', 'right': '' },
   \ }
+
+vnoremap <leader>c :OSCYank<CR>
+nnoremap <leader>c :OSCYankReg +<CR>
