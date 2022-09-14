@@ -25,10 +25,26 @@ pcall(function()
   require 'nvim-tree'.setup {
     diagnostics = { enable = true },
     view = { width = 40, hide_root_folder = true },
+    renderer = {
+      icons = {
+        show = { file = true, folder = true, folder_arrow = false, git = false },
+        glyphs = {
+          default = ' ',
+          folder = {
+            default = '+',
+            open = '-',
+            empty = '+',
+            empty_open = '-',
+            symlink = '+',
+            symlink_open = '-',
+          },
+        },
+      }
+    }
   }
 
   require 'nvim-treesitter.configs'.setup {
-    ensure_installed = { "solidity", "kotlin", "fish", "typescript", "tsx"},
+    ensure_installed = { 'solidity', 'kotlin', 'fish', 'typescript', 'tsx' },
     highlight = { enable = true }
   }
 
@@ -40,9 +56,6 @@ vim.opt.mouse = 'a'
 vim.opt.updatetime = 300
 vim.opt.background = 'light'
 vim.opt.undofile = true
+vim.opt.swapfile = false
+vim.opt.termguicolors = true
 vim.cmd 'silent! colorscheme solarized8_high'
-vim.cmd 'highlight Normal guibg=none'
-
-if os.getenv("TERM_PROGRAM") ~= 'Apple_Terminal' then
-  vim.opt.termguicolors = true
-end
