@@ -18,7 +18,6 @@ pcall(function()
     use 'hrsh7th/cmp-nvim-lsp-signature-help'
     use 'saadparwaiz1/cmp_luasnip'
     use 'L3MON4D3/LuaSnip'
-    use 'glepnir/lspsaga.nvim'
     use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
   end)
 
@@ -27,7 +26,7 @@ pcall(function()
     view = { width = 40, hide_root_folder = true },
     renderer = {
       icons = {
-        show = { file = true, folder = true, folder_arrow = false, git = false },
+        show = { file = true, folder = true, folder_arrow = false, git = true },
         glyphs = {
           default = ' ',
           folder = {
