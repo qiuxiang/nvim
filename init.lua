@@ -22,7 +22,16 @@ pcall(function()
   end)
 
   require 'nvim-tree'.setup {
-    diagnostics = { enable = true },
+    diagnostics = {
+      enable = true,
+      show_on_dirs = true,
+      icons = {
+        hint = "H",
+        info = "I",
+        warning = "W",
+        error = "E",
+      },
+    },
     view = { width = 40, hide_root_folder = true },
     renderer = {
       icons = {
@@ -38,8 +47,8 @@ pcall(function()
             symlink_open = '-',
           },
         },
-      }
-    }
+      },
+    },
   }
 
   require 'nvim-treesitter.configs'.setup {
