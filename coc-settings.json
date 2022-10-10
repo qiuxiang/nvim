@@ -1,6 +1,6 @@
 {
   "colors.filetypes": ["*"],
-  "semanticTokens.filetypes": ["dart"],
+  "highlight.disableLanguages": ["dart"],
   "git.addedSign.hlGroup": "GitGutterAdd",
   "git.changedSign.hlGroup": "GitGutterChange",
   "git.removedSign.hlGroup": "GitGutterDelete",

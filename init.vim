@@ -28,8 +28,4 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 map <leader>y :OSCYank<CR>
 map <leader>t :Tmuxline lightline<cr>
-let g:lightline = {
-  \ 'colorscheme': 'solarized',
-  \ 'separator': { 'left': '', 'right': '' },
-  \ 'subseparator': { 'left': '', 'right': '' },
-  \ }
+let g:lightline = {'colorscheme': 'solarized'}
