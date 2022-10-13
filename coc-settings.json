@@ -6,6 +6,7 @@
   "git.removedSign.hlGroup": "GitGutterDelete",
   "git.topRemovedSign.hlGroup": "GitGutterDelete",
   "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
+  "git.changeRemovedSign.text": "~",
   "javascript.suggestionActions.enabled": false,
   "css.lint.unknownAtRules": "ignore",
   "languageserver": {
