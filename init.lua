@@ -8,6 +8,7 @@ pcall(function()
     use 'editorconfig/editorconfig-vim'
     use 'nvim-treesitter/nvim-treesitter'
     use 'airblade/vim-gitgutter'
+    use 'ojroques/vim-oscyank'
 
     use 'b0o/schemastore.nvim'
     use 'neovim/nvim-lspconfig'
@@ -71,3 +72,4 @@ vim.opt.swapfile = false
 vim.opt.termguicolors = true
 vim.cmd 'silent! colorscheme solarized8_high'
 vim.cmd 'set fillchars+=vert:\\ '
+vim.cmd 'map <leader>y :OSCYank<CR>'
