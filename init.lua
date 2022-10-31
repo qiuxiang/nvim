@@ -25,18 +25,21 @@ pcall(function()
       enable = true,
       show_on_dirs = true,
       icons = {
-        hint = "h",
-        info = "i",
-        warning = "w",
-        error = "e",
+        hint = 'h',
+        info = 'i',
+        warning = 'w',
+        error = 'e',
       },
     },
     view = { width = 40, hide_root_folder = true },
     renderer = {
+      highlight_git = true,
       icons = {
-        show = { file = true, folder = true, folder_arrow = false, git = true },
+        show = { file = true, folder = true, folder_arrow = false, git = false },
+        symlink_arrow = ' -> ',
         glyphs = {
           default = ' ',
+          symlink = ' ',
           folder = {
             default = '+',
             open = '-',
@@ -44,11 +47,6 @@ pcall(function()
             empty_open = '-',
             symlink = '+',
             symlink_open = '-',
-          },
-          git = {
-            unstaged = "!",
-            unmerged = "U",
-            deleted = "D",
           },
         },
       },
