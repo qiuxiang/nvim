@@ -1,17 +1,7 @@
 local lspconfig = require 'lspconfig'
-local configs = require 'lspconfig.configs'
-configs.solidity = {
-  default_config = {
-    cmd = { 'solidity-ls', '--stdio' },
-    -- cmd = { 'node', '--inspect', '/home/i/Projects/solidity-ls/dist', '--stdio' },
-    filetypes = { 'solidity' },
-    root_dir = lspconfig.util.find_git_ancestor,
-    single_file_support = true,
-  },
-}
 local servers = {
-  'html', 'cssls', 'tsserver', 'jsonls', 'tailwindcss',
-  'sumneko_lua', 'solidity', 'sourcekit', 'gopls'
+  'html', 'cssls', 'tsserver', 'jsonls',
+  -- 'tailwindcss', 'sourcekit', 'gopls', 'sumneko_lua',
 }
 local settings = {
   json = {
@@ -20,11 +10,10 @@ local settings = {
   },
   Lua = {
     diagnostics = { globals = { 'vim' } },
-    workspace = { library = vim.api.nvim_get_runtime_file("", true) },
+    workspace = { library = vim.api.nvim_get_runtime_file('', true) },
   },
 }
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require 'cmp_nvim_lsp'.update_capabilities(capabilities)
+local capabilities = require 'cmp_nvim_lsp'.default_capabilities()
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup { capabilities = capabilities, settings = settings }
 end
@@ -37,7 +26,7 @@ cmp.setup {
     end,
   },
   mapping = cmp.mapping.preset.insert({
-    ['<C-Space>'] = cmp.mapping.complete({}),
+    ['<C-Space>'] = cmp.mapping.complete(),
     ['<CR>'] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
@@ -47,7 +36,6 @@ cmp.setup {
     { name = 'buffer' },
     { name = 'path' },
     { name = 'nvim_lsp' },
-    { name = 'nvim_lsp_signature_help' },
     { name = 'luasnip' },
   },
 }

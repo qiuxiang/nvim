@@ -15,7 +15,6 @@ pcall(function()
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
-    use 'hrsh7th/cmp-nvim-lsp-signature-help'
     use 'saadparwaiz1/cmp_luasnip'
     use 'L3MON4D3/LuaSnip'
     use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
@@ -26,10 +25,10 @@ pcall(function()
       enable = true,
       show_on_dirs = true,
       icons = {
-        hint = "H",
-        info = "I",
-        warning = "W",
-        error = "E",
+        hint = "h",
+        info = "i",
+        warning = "w",
+        error = "e",
       },
     },
     view = { width = 40, hide_root_folder = true },
@@ -46,15 +45,21 @@ pcall(function()
             symlink = '+',
             symlink_open = '-',
           },
+          git = {
+            unstaged = "!",
+            unmerged = "U",
+            deleted = "D",
+          },
         },
       },
     },
+    filesystem_watchers = { enable = false },
   }
 
-  require 'nvim-treesitter.configs'.setup {
-    ensure_installed = { 'solidity', 'kotlin', 'fish', 'typescript', 'tsx' },
-    highlight = { enable = true }
-  }
+  -- require 'nvim-treesitter.configs'.setup {
+  --   ensure_installed = { 'solidity', 'kotlin', 'fish', 'typescript', 'tsx' },
+  --   highlight = { enable = true }
+  -- }
 
   require 'lsp'
 end)
@@ -67,3 +72,4 @@ vim.opt.undofile = true
 vim.opt.swapfile = false
 vim.opt.termguicolors = true
 vim.cmd 'silent! colorscheme solarized8_high'
+vim.cmd 'set fillchars+=vert:\\ '
