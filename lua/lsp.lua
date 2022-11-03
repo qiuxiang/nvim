@@ -19,25 +19,27 @@ for _, lsp in ipairs(servers) do
 end
 
 local cmp = require 'cmp'
-cmp.setup {
-  snippet = {
-    expand = function(args)
-      require 'luasnip'.lsp_expand(args.body)
-    end,
-  },
-  mapping = cmp.mapping.preset.insert({
-    ['<cr>'] = cmp.mapping.confirm {
-      behavior = cmp.ConfirmBehavior.Replace,
-      select = true,
+if cmp ~= nil then
+  cmp.setup {
+    snippet = {
+      expand = function(args)
+        require 'luasnip'.lsp_expand(args.body)
+      end,
     },
-  }),
-  sources = {
-    { name = 'buffer' },
-    { name = 'path' },
-    { name = 'nvim_lsp' },
-    { name = 'luasnip' },
-  },
-}
+    mapping = cmp.mapping.preset.insert({
+      ['<cr>'] = cmp.mapping.confirm {
+        behavior = cmp.ConfirmBehavior.Replace,
+        select = true,
+      },
+    }),
+    sources = {
+      { name = 'buffer' },
+      { name = 'path' },
+      { name = 'nvim_lsp' },
+      { name = 'luasnip' },
+    },
+  }
+end
 
 require "flutter-tools".setup {
   lsp = { color = { enabled = true } },
@@ -50,3 +52,5 @@ vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 vim.keymap.set('n', '<leader>f', vim.lsp.buf.formatting, {})
 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
 vim.keymap.set('n', '<leader>a', vim.lsp.buf.code_action, {})
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, {})
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, {})
