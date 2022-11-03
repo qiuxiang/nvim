@@ -1,7 +1,7 @@
 local lspconfig = require 'lspconfig'
 local servers = {
-  'html', 'cssls', 'tsserver', 'jsonls',
-  -- 'tailwindcss', 'sourcekit', 'gopls', 'sumneko_lua',
+  'html', 'cssls', 'tsserver', 'jsonls', 'sumneko_lua',
+  -- 'tailwindcss', 'sourcekit', 'gopls'
 }
 local settings = {
   json = {
@@ -26,8 +26,7 @@ cmp.setup {
     end,
   },
   mapping = cmp.mapping.preset.insert({
-    ['<C-Space>'] = cmp.mapping.complete(),
-    ['<CR>'] = cmp.mapping.confirm {
+    ['<cr>'] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     },

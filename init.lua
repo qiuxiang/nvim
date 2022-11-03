@@ -6,7 +6,6 @@ pcall(function()
     use 'kyazdani42/nvim-tree.lua'
     use 'lifepillar/vim-solarized8'
     use 'editorconfig/editorconfig-vim'
-    use 'nvim-treesitter/nvim-treesitter'
     use 'airblade/vim-gitgutter'
     use 'ojroques/vim-oscyank'
 
@@ -21,55 +20,17 @@ pcall(function()
     use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
   end)
 
-  require 'nvim-tree'.setup {
-    diagnostics = {
-      enable = true,
-      show_on_dirs = true,
-      icons = {
-        hint = 'h',
-        info = 'i',
-        warning = 'w',
-        error = 'e',
-      },
-    },
-    view = { width = 40, hide_root_folder = true },
-    renderer = {
-      highlight_git = true,
-      icons = {
-        show = { file = true, folder = true, folder_arrow = false, git = false },
-        symlink_arrow = ' -> ',
-        glyphs = {
-          default = ' ',
-          symlink = ' ',
-          folder = {
-            default = '+',
-            open = '-',
-            empty = '+',
-            empty_open = '-',
-            symlink = '+',
-            symlink_open = '-',
-          },
-        },
-      },
-    },
-    filesystem_watchers = { enable = false },
-  }
-
-  -- require 'nvim-treesitter.configs'.setup {
-  --   ensure_installed = { 'solidity', 'kotlin', 'fish', 'typescript', 'tsx' },
-  --   highlight = { enable = true }
-  -- }
-
   require 'lsp'
+  require 'nvim-tree-config'
 end)
 
 vim.opt.wrap = false
-vim.opt.mouse = 'a'
 vim.opt.updatetime = 300
 vim.opt.background = 'light'
 vim.opt.undofile = true
 vim.opt.swapfile = false
 vim.opt.termguicolors = true
-vim.cmd 'silent! colorscheme solarized8_high'
+vim.cmd.colorscheme('solarized8_high')
 vim.cmd 'set fillchars+=vert:\\ '
-vim.cmd 'map <leader>y :OSCYank<CR>'
+vim.g.oscyank_term = 'default'
+vim.keymap.set('v', '<leader>y', ':OSCYank<cr>')
