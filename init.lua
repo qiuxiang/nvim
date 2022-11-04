@@ -30,7 +30,7 @@ vim.opt.background = 'light'
 vim.opt.undofile = true
 vim.opt.swapfile = false
 vim.opt.termguicolors = true
-vim.cmd.colorscheme('solarized8_high')
+vim.cmd 'silent! colorscheme solarized8_high'
 vim.cmd 'set fillchars+=vert:\\ '
 vim.g.oscyank_term = 'default'
 vim.keymap.set('v', '<leader>y', ':OSCYank<cr>')
