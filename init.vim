@@ -19,6 +19,7 @@ set undodir=~/.cache/vim
 set hlsearch
 set incsearch
 set termguicolors
+set fillchars+=vert:\ 
 
 silent! colorscheme solarized8_high
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
