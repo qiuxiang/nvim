@@ -25,5 +25,6 @@ silent! colorscheme solarized8_high
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
+let g:oscyank_term = 'default'
 map <leader>y :OSCYank<CR>
 au BufNewFile,BufRead *.sol set filetype=solidity
