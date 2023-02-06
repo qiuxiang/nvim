@@ -6,9 +6,7 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'honza/vim-snippets'
 Plug 'ojroques/vim-oscyank'
 call plug#end()
-
 runtime coc.vim
-silent! colorscheme solarized8_high
 
 set nowrap
 set mouse=a
@@ -23,6 +21,7 @@ set termguicolors
 set fillchars+=vert:\ 
 set hidden
 
+silent! colorscheme solarized8_high
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 let g:oscyank_term = 'default'
