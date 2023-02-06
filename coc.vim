@@ -1,15 +1,19 @@
-map gd <Plug>(coc-definition)
-map gi <Plug>(coc-implementation)
-map gr <Plug>(coc-references)
+nmap gd <Plug>(coc-definition)
+nmap gi <Plug>(coc-implementation)
+nmap gr <Plug>(coc-references)
 
-map <leader>oi :call CocAction('runCommand', 'editor.action.organizeImport')<cr><Plug>(coc-format)
-map <leader>rn <Plug>(coc-rename)
-map <leader>f <Plug>(coc-format)
-map <leader>a <Plug>(coc-codeaction-cursor)
+nmap <leader>oi :call CocAction('runCommand', 'editor.action.organizeImport')<cr><Plug>(coc-format)
+nmap <leader>rn <Plug>(coc-rename)
+nmap <leader>f <Plug>(coc-format)
+nmap <leader>a <Plug>(coc-codeaction-cursor)
+
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " Use K to show documentation in preview window.
-map <silent> K :call ShowDocumentation()<cr>
-
+nmap <silent> K :call ShowDocumentation()<cr>
 function! ShowDocumentation()
   if CocAction('hasProvider', 'hover')
     call CocActionAsync('doHover')
@@ -18,9 +22,11 @@ function! ShowDocumentation()
   endif
 endfunction
 
-" Use tab for trigger completion with characters ahead and navigate.
+" Use tab for trigger completion with characters ahead and navigate
+" NOTE: There's always complete item selected by default, you may want to enable
+" no select by `"suggest.noselect": true` in your configuration file
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
+" other plugin before putting this into your config
 inoremap <silent><expr> <TAB>
       \ coc#pum#visible() ? coc#pum#next(1):
       \ CheckBackspace() ? "\<Tab>" :
