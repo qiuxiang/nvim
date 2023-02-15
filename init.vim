@@ -14,7 +14,7 @@ set background=light
 set wildmenu
 set noswapfile
 set undofile
-set undodir=~/.cache/vim
+" set undodir=~/.cache/vim
 set hlsearch
 set incsearch
 set termguicolors
