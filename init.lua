@@ -34,3 +34,6 @@ vim.cmd 'silent! colorscheme solarized8_high'
 vim.cmd 'set fillchars+=vert:\\ '
 vim.g.oscyank_term = 'default'
 vim.keymap.set('v', '<leader>y', ':OSCYank<cr>')
+
+-- 用 prettier 取代部分 lsp format
+vim.cmd 'au FileType javascript,typescript,css,json,html,markdown,yaml nmap <leader>f <plug>(Prettier)'

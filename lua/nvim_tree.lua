@@ -20,6 +20,7 @@ require 'nvim-tree'.setup {
     mappings = {
       list = {
         { key = "l", action = "edit" },
+        { key = "h", action = "close_node" },
       },
     },
   },
@@ -40,7 +41,7 @@ require 'nvim-tree'.setup {
         },
         git = {
           unmerged = "═",
-          deleted = "",
+          deleted = "D",
         },
       },
     },
