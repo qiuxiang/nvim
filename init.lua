@@ -21,7 +21,7 @@ pcall(function()
   end)
 
   require 'lsp'
-  require 'nvim-tree-config'
+  require 'nvim_tree'
 end)
 
 vim.opt.wrap = false
