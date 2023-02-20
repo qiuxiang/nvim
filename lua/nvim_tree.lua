@@ -41,7 +41,8 @@ require 'nvim-tree'.setup {
         },
         git = {
           unmerged = "═",
-          deleted = "D",
+          deleted = "",
+          untracked = "",
         },
       },
     },
