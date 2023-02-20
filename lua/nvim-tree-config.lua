@@ -1,20 +1,32 @@
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 require 'nvim-tree'.setup {
   diagnostics = {
     enable = true,
     show_on_dirs = true,
     icons = {
-      hint = 'h',
-      info = 'i',
-      warning = 'w',
-      error = 'e',
+      hint = '!',
+      info = '!',
+      warning = '!',
+      error = '!',
     },
   },
-  view = { width = 40, hide_root_folder = true },
+  filters = {
+    dotfiles = true,
+  },
+  view = {
+    width = 40,
+    mappings = {
+      list = {
+        { key = "l", action = "edit" },
+      },
+    },
+  },
   renderer = {
     highlight_git = true,
     icons = {
-      show = { file = true, folder = true, folder_arrow = false, git = false },
-      symlink_arrow = ' -> ',
+      show = { folder_arrow = false },
       glyphs = {
         default = ' ',
         symlink = ' ',
@@ -25,6 +37,10 @@ require 'nvim-tree'.setup {
           empty_open = '-',
           symlink = '+',
           symlink_open = '-',
+        },
+        git = {
+          unmerged = "═",
+          deleted = "",
         },
       },
     },
