@@ -26,14 +26,18 @@ end)
 
 vim.opt.wrap = false
 vim.opt.updatetime = 300
-vim.opt.background = 'light'
 vim.opt.undofile = true
 vim.opt.swapfile = false
 vim.opt.termguicolors = true
-vim.cmd 'silent! colorscheme solarized8_high'
-vim.cmd 'set fillchars+=vert:\\ '
 vim.g.oscyank_term = 'default'
 vim.keymap.set('v', '<leader>y', ':OSCYank<cr>')
 
--- 用 prettier 取代部分 lsp format
-vim.cmd 'au FileType javascript,typescript,css,json,html,markdown,yaml nmap <buffer> <leader>f <plug>(Prettier)'
+vim.cmd [[
+silent! colorscheme solarized8_high
+highlight Normal guibg=none
+highlight SignColumn guibg=none
+set fillchars+=vert:\ 
+
+" 用 prettier 取代部分 lsp format
+autocmd FileType javascript,typescript,css,json,html,markdown,yaml nmap <buffer> <leader>f <plug>(Prettier)
+]]
