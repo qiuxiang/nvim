@@ -36,4 +36,4 @@ vim.g.oscyank_term = 'default'
 vim.keymap.set('v', '<leader>y', ':OSCYank<cr>')
 
 -- 用 prettier 取代部分 lsp format
-vim.cmd 'au FileType javascript,typescript,css,json,html,markdown,yaml nmap <leader>f <plug>(Prettier)'
+vim.cmd 'au FileType javascript,typescript,css,json,html,markdown,yaml nmap <buffer> <leader>f <plug>(Prettier)'
