@@ -26,6 +26,7 @@ end)
 
 vim.opt.wrap = false
 vim.opt.updatetime = 300
+vim.opt.background = 'light'
 vim.opt.undofile = true
 vim.opt.swapfile = false
 vim.opt.termguicolors = true
@@ -39,5 +40,5 @@ highlight SignColumn guibg=none
 set fillchars+=vert:\ 
 
 " 用 prettier 取代部分 lsp format
-autocmd FileType javascript,typescript,css,json,html,markdown,yaml nmap <buffer> <leader>f <plug>(Prettier)
+autocmd FileType javascript,typescript,javascriptreact,typescriptreact,css,json,html,markdown,yaml nmap <buffer> <leader>f <plug>(Prettier)
 ]]

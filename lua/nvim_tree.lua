@@ -21,6 +21,7 @@ require 'nvim-tree'.setup {
       list = {
         { key = "l", action = "edit" },
         { key = "h", action = "close_node" },
+        { key = "t", action = "tabnew" },
       },
     },
   },
@@ -42,7 +43,6 @@ require 'nvim-tree'.setup {
         git = {
           unmerged = "═",
           deleted = "",
-          untracked = "",
         },
       },
     },
