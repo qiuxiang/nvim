@@ -8,6 +8,8 @@ pcall(function()
     use 'editorconfig/editorconfig-vim'
     use 'airblade/vim-gitgutter'
     use 'ojroques/vim-oscyank'
+    use 'itchyny/lightline.vim'
+    use 'edkolev/tmuxline.vim'
 
     use 'b0o/schemastore.nvim'
     use 'neovim/nvim-lspconfig'
@@ -31,7 +33,12 @@ vim.opt.undofile = true
 vim.opt.swapfile = false
 vim.opt.termguicolors = true
 vim.g.oscyank_term = 'default'
-vim.keymap.set('v', '<leader>y', ':OSCYank<cr>')
+vim.g.lightline = {
+  colorscheme = 'solarized',
+  separator = { left = '', right = '' },
+  subseparator = { left = '', right = '' },
+}
+vim.keymap.set('v', '<leader>y', ':OSCYankVisual<cr>')
 
 vim.cmd [[
 silent! colorscheme solarized8_high
