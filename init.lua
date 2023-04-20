@@ -8,8 +8,8 @@ pcall(function()
     use 'editorconfig/editorconfig-vim'
     use 'airblade/vim-gitgutter'
     use 'ojroques/vim-oscyank'
-    use 'itchyny/lightline.vim'
-    use 'edkolev/tmuxline.vim'
+    -- use 'itchyny/lightline.vim'
+    -- use 'edkolev/tmuxline.vim'
 
     use 'b0o/schemastore.nvim'
     use 'neovim/nvim-lspconfig'
