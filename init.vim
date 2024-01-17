@@ -2,7 +2,7 @@ call plug#begin()
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'lifepillar/vim-solarized8'
+" Plug 'lifepillar/vim-solarized8'
 Plug 'honza/vim-snippets'
 Plug 'ojroques/vim-oscyank'
 " Plug 'itchyny/lightline.vim'
