@@ -1,25 +1,16 @@
 {
-  "npm.binPath": "pnpm",
   "colors.enable": true,
+  "semanticTokens.enable": true,
   "git.addedSign.hlGroup": "GitGutterAdd",
   "git.changedSign.hlGroup": "GitGutterChange",
   "git.removedSign.hlGroup": "GitGutterDelete",
   "git.topRemovedSign.hlGroup": "GitGutterDelete",
   "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
-  "git.changeRemovedSign.text": "~",
+  "python.formatting.provider": "black",
   "javascript.suggestionActions.enabled": false,
   "css.lint.unknownAtRules": "ignore",
-  "languageserver": {
-    "tailwind": {
-      "command": "tailwindcss-language-server",
-      "filetypes": ["html", "javascriptreact", "typescriptreact"],
-      "rootPatterns": ["tailwind.config.js"],
-      "settings": {
-        "tailwindCSS": {
-          "classAttributes": ["class", "className"]
-        }
-      }
-    }
-  },
+  "intelephense.diagnostics.undefinedTypes": false,
+  "intelephense.diagnostics.undefinedProperties": false,
+  "intelephense.diagnostics.undefinedMethods": false,
   "snippets.ultisnips.pythonPrompt": false
 }
