@@ -13,11 +13,14 @@ runtime lightline.vim
 
 set nowrap
 set mouse=a
-set background=light
+" set background=light
 set termguicolors
+set undofile
 
-" silent! colorscheme solarized8_high
+silent! colorscheme desert
 highlight clear SignColumn
+highlight Normal guibg=NONE
+highlight EndOfBuffer guibg=NONE
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 let g:oscyank_term = 'default'

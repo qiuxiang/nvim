@@ -9,8 +9,8 @@
   "python.formatting.provider": "black",
   "javascript.suggestionActions.enabled": false,
   "css.lint.unknownAtRules": "ignore",
-  "intelephense.diagnostics.undefinedTypes": false,
-  "intelephense.diagnostics.undefinedProperties": false,
-  "intelephense.diagnostics.undefinedMethods": false,
-  "snippets.ultisnips.pythonPrompt": false
+  "snippets.ultisnips.pythonPrompt": false,
+  "[typescript]": {
+    "semanticTokens.enable": false
+  }
 }
