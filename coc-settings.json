@@ -1,5 +1,6 @@
 {
   "colors.enable": true,
+  "inlayHint.enable": false,
   "semanticTokens.enable": true,
   "git.addedSign.hlGroup": "GitGutterAdd",
   "git.changedSign.hlGroup": "GitGutterChange",

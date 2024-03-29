@@ -5,6 +5,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'lifepillar/vim-solarized8'
 Plug 'honza/vim-snippets'
 Plug 'ojroques/vim-oscyank'
+Plug 'Exafunction/codeium.vim'
 " Plug 'itchyny/lightline.vim'
 " Plug 'edkolev/tmuxline.vim'
 call plug#end()
@@ -16,6 +17,12 @@ set mouse=a
 " set background=light
 set termguicolors
 set undofile
+
+set undodir=~/.cache/vim-undo
+set wildmenu
+set hlsearch
+set incsearch
+set noswapfile
 
 silent! colorscheme desert
 highlight clear SignColumn
