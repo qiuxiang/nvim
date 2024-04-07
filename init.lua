@@ -1,51 +1,55 @@
-pcall(function()
-  require 'packer'.startup(function(use)
-    use 'wbthomason/packer.nvim'
-    use 'prettier/vim-prettier'
-    use 'tpope/vim-fugitive'
-    use 'kyazdani42/nvim-tree.lua'
-    use 'lifepillar/vim-solarized8'
-    use 'editorconfig/editorconfig-vim'
-    use 'airblade/vim-gitgutter'
-    use 'ojroques/vim-oscyank'
-    -- use 'itchyny/lightline.vim'
-    -- use 'edkolev/tmuxline.vim'
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "https://github.com/folke/lazy.nvim.git",
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
-    use 'b0o/schemastore.nvim'
-    use 'neovim/nvim-lspconfig'
-    use 'hrsh7th/nvim-cmp'
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/cmp-path'
-    use 'saadparwaiz1/cmp_luasnip'
-    use 'L3MON4D3/LuaSnip'
-    use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
-  end)
+require("lazy").setup({
+  'tpope/vim-fugitive',
+  'nvim-tree/nvim-tree.lua',
+  'lifepillar/vim-solarized8',
+  'editorconfig/editorconfig-vim',
+  'airblade/vim-gitgutter',
+  'ojroques/vim-oscyank',
 
-  require 'lsp'
-  require 'nvim_tree'
-end)
+  'nvim-lua/plenary.nvim',
+  'stevearc/dressing.nvim',
+  'akinsho/flutter-tools.nvim',
+
+  'b0o/schemastore.nvim',
+  'neovim/nvim-lspconfig',
+  'hrsh7th/nvim-cmp',
+  'hrsh7th/cmp-nvim-lsp',
+  'hrsh7th/cmp-buffer',
+  'hrsh7th/cmp-path',
+  'saadparwaiz1/cmp_luasnip',
+  'L3MON4D3/LuaSnip',
+  "Exafunction/codeium.vim",
+  { "Exafunction/codeium.nvim", config = true },
+})
+
+require 'lsp'
+require 'nvim_tree'
 
 vim.opt.wrap = false
 vim.opt.updatetime = 300
-vim.opt.background = 'light'
+-- vim.opt.background = 'light'
 vim.opt.undofile = true
 vim.opt.swapfile = false
 vim.opt.termguicolors = true
-vim.g.oscyank_term = 'default'
-vim.g.lightline = {
-  colorscheme = 'solarized',
-  separator = { left = '', right = '' },
-  subseparator = { left = '', right = '' },
-}
 vim.keymap.set('v', '<leader>y', ':OSCYankVisual<cr>')
 
 vim.cmd [[
-silent! colorscheme solarized8_high
+colorscheme solarized8_high
 highlight Normal guibg=none
-highlight SignColumn guibg=none
-set fillchars+=vert:\ 
-
-" 用 prettier 取代部分 lsp format
-autocmd FileType javascript,typescript,javascriptreact,typescriptreact,css,json,html,markdown,yaml nmap <buffer> <leader>f <plug>(Prettier)
+set guicursor=n-v-c-i:block
+autocmd ColorScheme * highlight SignColumn guibg=none
+autocmd ColorScheme * highlight GitGutterChange guibg=none
+autocmd ColorScheme * highlight GitGutterDelete guibg=none
+autocmd ColorScheme * highlight GitGutterAdd guibg=none
 ]]

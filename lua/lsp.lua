@@ -1,7 +1,7 @@
 local lspconfig = require 'lspconfig'
 local servers = {
-  'html', 'cssls', 'tsserver', 'jsonls', 'tailwindcss',
-  -- 'sourcekit', 'gopls', 'lua_ls'
+  'html', 'cssls', 'tsserver', 'jsonls', 'lua_ls'
+  -- 'sourcekit', 'gopls'
 }
 local settings = {
   json = {
@@ -31,12 +31,14 @@ if cmp ~= nil then
         behavior = cmp.ConfirmBehavior.Replace,
         select = true,
       },
+      ['<a-space>'] = cmp.mapping.complete(),
     }),
     sources = {
       { name = 'buffer' },
       { name = 'path' },
       { name = 'nvim_lsp' },
       { name = 'luasnip' },
+      { name = "codeium", priority = 1000 },
     },
   }
 end
