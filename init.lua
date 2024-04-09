@@ -38,7 +38,7 @@ require 'nvim_tree'
 
 vim.opt.wrap = false
 vim.opt.updatetime = 300
--- vim.opt.background = 'light'
+vim.opt.background = 'light'
 vim.opt.undofile = true
 vim.opt.swapfile = false
 vim.opt.termguicolors = true
@@ -47,9 +47,9 @@ vim.keymap.set('v', '<leader>y', ':OSCYankVisual<cr>')
 vim.cmd [[
 colorscheme solarized8_high
 highlight Normal guibg=none
+highlight SignColumn guibg=none
+highlight GitGutterChange guibg=none
+highlight GitGutterDelete guibg=none
+highlight GitGutterAdd guibg=none
 set guicursor=n-v-c-i:block
-autocmd ColorScheme * highlight SignColumn guibg=none
-autocmd ColorScheme * highlight GitGutterChange guibg=none
-autocmd ColorScheme * highlight GitGutterDelete guibg=none
-autocmd ColorScheme * highlight GitGutterAdd guibg=none
 ]]
