@@ -15,6 +15,7 @@ local function on_attach(bufnr)
   vim.keymap.set('n', 'l', api.node.open.edit, opts('Open'))
   vim.keymap.set('n', 'h', api.node.navigate.parent_close, opts('Close Directory'))
   vim.keymap.set('n', 't', api.node.open.tab, opts('Open: New Tab'))
+  vim.keymap.set('n', 'g.', api.tree.toggle_hidden_filter, opts('Toggle Filter: Dotfiles'))
 end
 
 require 'nvim-tree'.setup {
