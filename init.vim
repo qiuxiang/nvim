@@ -24,7 +24,7 @@ set hlsearch
 set incsearch
 set noswapfile
 
-silent! colorscheme desert
+" silent! colorscheme desert
 highlight clear SignColumn
 highlight Normal guibg=NONE
 highlight EndOfBuffer guibg=NONE
