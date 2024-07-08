@@ -6,6 +6,7 @@ nmap <leader>oi :call CocAction('runCommand', 'editor.action.organizeImport')<cr
 nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>f <Plug>(coc-format)
 nmap <leader>a <Plug>(coc-codeaction-cursor)
+nmap <leader>qf :call CocAction('fixAll')<cr>
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
