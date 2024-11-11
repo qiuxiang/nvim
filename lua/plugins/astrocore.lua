@@ -5,9 +5,9 @@ return {
 	opts = {
 		options = {
 			g = {
-				clipboard = {
-					copy = { ["+"] = require("vim.ui.clipboard.osc52").copy("+") },
-				},
+				-- clipboard = {
+				-- 	copy = { ["+"] = require("vim.ui.clipboard.osc52").copy("+") },
+				-- },
 			},
 		},
 	},
