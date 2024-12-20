@@ -4,9 +4,6 @@ return {
 	opts = {
 		virtual_text = {
 			enabled = true,
-			key_bindings = {
-				accept = "<Right>",
-			},
 		},
 	},
 }
