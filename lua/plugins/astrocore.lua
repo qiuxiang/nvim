@@ -7,6 +7,7 @@ return {
       opt = {
         relativenumber = false,
         number = false,
+        background = "light",
       },
       -- g = {
       --   clipboard = {
