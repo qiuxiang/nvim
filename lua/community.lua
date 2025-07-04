@@ -11,4 +11,5 @@ return {
   { import = "astrocommunity.colorscheme.everforest" },
   { import = "astrocommunity.search.grug-far-nvim" },
   { import = "astrocommunity.recipes.ai" },
+  { import = "astrocommunity.git.neogit" },
 }
