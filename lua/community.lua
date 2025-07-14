@@ -8,7 +8,7 @@ return {
   -- { import = "astrocommunity.pack.typescript" },
   -- { import = "astrocommunity.pack.rust" },
   -- { import = "astrocommunity.pack.go" },
-  { import = "astrocommunity.colorscheme.everforest" },
+  { import = "astrocommunity.colorscheme.rose-pine" },
   { import = "astrocommunity.search.grug-far-nvim" },
   { import = "astrocommunity.recipes.ai" },
   { import = "astrocommunity.git.neogit" },
