@@ -10,6 +10,7 @@ return {
   -- { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.colorscheme.rose-pine" },
   { import = "astrocommunity.search.grug-far-nvim" },
-  { import = "astrocommunity.recipes.ai" },
   { import = "astrocommunity.git.neogit" },
+  { import = "astrocommunity.completion.copilot-vim" },
+  { import = "astrocommunity.completion.copilot-vim-cmp" },
 }
