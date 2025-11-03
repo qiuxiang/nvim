@@ -5,11 +5,5 @@ return {
     features = {
       semantic_tokens = false,
     },
-    formatting = {
-      disabled = {
-        "jsonls",
-        "vtsls",
-      },
-    },
   },
 }
