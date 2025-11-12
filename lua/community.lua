@@ -10,5 +10,4 @@ return {
 	-- { import = "astrocommunity.pack.rust" },
 	-- { import = "astrocommunity.pack.go" },
 	{ import = "astrocommunity.colorscheme.everforest" },
-	{ import = "astrocommunity.recipes.ai" },
 }
