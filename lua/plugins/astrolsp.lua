@@ -1,9 +1,22 @@
+---@type LazySpec
 return {
-  "AstroNvim/astrolsp",
-  ---@type AstroLSPOpts
-  opts = {
-    features = {
-      semantic_tokens = false,
-    },
-  },
+	"AstroNvim/astrolsp",
+	opts = {
+		features = {
+			semantic_tokens = false,
+		},
+		formatting = {
+			disabled = {
+				"vtsls",
+				"jsonls",
+			},
+		},
+		config = {
+			dartls = {
+				settings = {
+					lineLength = 120,
+				},
+			},
+		},
+	},
 }
