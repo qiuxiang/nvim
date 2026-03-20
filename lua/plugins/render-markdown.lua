@@ -8,13 +8,13 @@ return {
 			unchecked = { icon = "⬜" },
 			checked = { icon = "✅" },
 		},
-		heading = { icons = {}, sign = false, backgrounds = {} },
-		anti_conceal = {
-			enabled = false,
-		},
-		code = {
+		heading = {
+			icons = { "", "", "", "", "", "" },
+			position = "inline",
 			sign = false,
-			language = false,
+			backgrounds = {},
 		},
+		anti_conceal = { enabled = false },
+		code = { sign = false, language = false },
 	},
 }
