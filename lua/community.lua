@@ -9,4 +9,5 @@ return {
   -- { import = "astrocommunity.pack.biome" },
   -- { import = "astrocommunity.pack.rust" },
   -- { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.colorscheme.everforest" },
 }
