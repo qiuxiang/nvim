@@ -6,7 +6,7 @@ return {
       semantic_tokens = false,
     },
     formatting = {
-      format_on_save = false,
+      format_on_save = { enabled = false },
     },
   },
 }

@@ -1,6 +1,7 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocore",
+  opts_extend = {},
   ---@type AstroCoreOpts
   opts = {
     options = {
@@ -10,20 +11,9 @@ return {
         background = "light",
       },
     },
-    -- autocmds = {
-    --   transparent_bg = {
-    --     {
-    --       event = "ColorScheme",
-    --       callback = function()
-    --         for _, group in ipairs({
-    --           "Normal",
-    --           "NormalNC",
-    --         }) do
-    --           vim.api.nvim_set_hl(0, group, { bg = "NONE" })
-    --         end
-    --       end,
-    --     },
-    --   },
-    -- },
+    treesitter = {
+      auto_install = false,
+      ensure_installed = {},
+    },
   },
 }
