@@ -8,7 +8,6 @@ return {
     formatting = {
       format_on_save = { enabled = false },
     },
-    servers = { "tsc" },
     config = {
       tsc = {
         cmd = { "tsc", "--lsp", "--stdio" },
@@ -18,3 +17,4 @@ return {
     },
   },
 }
+
