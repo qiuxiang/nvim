@@ -8,7 +8,6 @@ return {
       opt = {
         relativenumber = false,
         number = false,
-        background = "light",
       },
     },
     treesitter = {
