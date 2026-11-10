@@ -9,7 +9,7 @@ Plug 'lambdalisue/fern-git-status.vim'
 call plug#end()
 
 set termguicolors
-colorscheme everforest
+silent! colorscheme everforest
 
 set nowrap
 set mouse=a
