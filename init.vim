@@ -17,6 +17,7 @@ set incsearch
 set noswapfile
 
 highlight clear SignColumn
+highlight TabLineFill cterm=NONE
 
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
