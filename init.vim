@@ -9,6 +9,7 @@ Plug 'lambdalisue/fern-git-status.vim'
 call plug#end()
 
 set termguicolors
+set background=light
 silent! colorscheme everforest
 
 set nowrap
