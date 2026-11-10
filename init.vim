@@ -4,8 +4,12 @@ Plug 'tpope/vim-fugitive'
 Plug 'ojroques/vim-oscyank'
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-hijack.vim'
+Plug 'sainnhe/everforest'
 Plug 'lambdalisue/fern-git-status.vim'
 call plug#end()
+
+set termguicolors
+colorscheme everforest
 
 set nowrap
 set mouse=a
@@ -17,7 +21,6 @@ set incsearch
 set noswapfile
 
 highlight clear SignColumn
-highlight TabLineFill cterm=NONE
 
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
