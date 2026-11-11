@@ -4,8 +4,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'ojroques/vim-oscyank'
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-hijack.vim'
-Plug 'sainnhe/everforest'
 Plug 'lambdalisue/fern-git-status.vim'
+Plug 'sainnhe/everforest'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 set termguicolors
@@ -20,11 +21,9 @@ set wildmenu
 set hlsearch
 set incsearch
 set noswapfile
+set fillchars+=vert:│
 
 highlight clear SignColumn
-
-let g:netrw_liststyle = 3
-let g:netrw_banner = 0
 
 let g:oscyank_term = 'default'
 map <leader>y :OSCYankVisual<CR>
