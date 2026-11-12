@@ -8,12 +8,16 @@ Plug 'lambdalisue/fern-git-status.vim'
 Plug 'sainnhe/everforest'
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'yegappan/lsp'
 call plug#end()
+runtime fern.vim
 runtime lightline.vim
+runtime lsp.vim
 
 set termguicolors
 set background=light
 silent! colorscheme everforest
+highlight clear SignColumn
 
 set nowrap
 set mouse=a
@@ -25,13 +29,5 @@ set incsearch
 set noswapfile
 set fillchars+=vert:│
 
-highlight clear SignColumn
-
-let g:oscyank_term = 'default'
 map <leader>y :OSCYankVisual<CR>
-
-let g:fern#renderer#default#leading = "  "
-let g:fern#renderer#default#leaf_symbol = "  "
-let g:fern#renderer#default#collapsed_symbol = "+ "
-let g:fern#renderer#default#expanded_symbol = "- "
-let g:fern#drawer_width = 40
+map <leader>e :Fern . -drawer -toggle<CR>
