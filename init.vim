@@ -27,7 +27,12 @@ set wildmenu
 set hlsearch
 set incsearch
 set noswapfile
+set autoread
 set fillchars+=vert:│
+
+let &t_fe = "\<Esc>[?1004h"
+let &t_fd = "\<Esc>[?1004l"
+autocmd FocusGained,CursorHold * silent! checktime
 
 map <leader>y :OSCYankVisual<CR>
 map <leader>e :Fern . -drawer -toggle<CR>
