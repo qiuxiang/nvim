@@ -1,3 +1,4 @@
+let mapleader = " "
 call plug#begin()
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
