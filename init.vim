@@ -6,8 +6,10 @@ Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-hijack.vim'
 Plug 'lambdalisue/fern-git-status.vim'
 Plug 'sainnhe/everforest'
+Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
 call plug#end()
+runtime lightline.vim
 
 set termguicolors
 set background=light
