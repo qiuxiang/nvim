@@ -1,3 +1,6 @@
+let g:lsp_enable = v:false
+command! LspEnable call LspEnable()
+
 autocmd User LspSetup call LspAddServer([#{
 \   name: 'tsc',
 \   filetype: ['javascript', 'javascriptreact', 'typescript', 'typescriptreact'],
